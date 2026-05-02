@@ -6,6 +6,7 @@ import { Nav } from './components/Nav';
 import { HomePage } from './pages/HomePage';
 import { ArticlePage } from './pages/ArticlePage';
 import { DemoPage } from './pages/DemoPage';
+import { CaseStudyPage } from './pages/CaseStudyPage';
 
 function readTheme(): boolean {
   if (typeof window === 'undefined') return true;
@@ -34,6 +35,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/demo" element={<DemoPage />} />
+            <Route path="/work/:slug" element={<CaseStudyPage />} />
             <Route path="/writing/:slug" element={<ArticlePage />} />
             <Route path="*" element={<ArticlePage />} />
           </Routes>

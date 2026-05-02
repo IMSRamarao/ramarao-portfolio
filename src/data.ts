@@ -9,6 +9,7 @@ export type Experience = {
   stack: string[];
 };
 export type Project = {
+  slug: string;
   name: string;
   tag: string;
   year: string;
@@ -97,6 +98,7 @@ export const data = {
 
   projects: [
     {
+      slug: 'dream-design-system',
       name: 'Dream Design System',
       tag: 'Design System',
       year: '2025',
@@ -111,6 +113,7 @@ export const data = {
       stack: ['React', 'TypeScript', 'MUI', 'Storybook', 'Figma'],
     },
     {
+      slug: 'dream-mcp',
       name: 'Dream MCP',
       tag: 'AI · MCP',
       year: '2025',
@@ -124,6 +127,7 @@ export const data = {
       stack: ['MCP', 'TypeScript', 'Claude', 'JSON-RPC'],
     },
     {
+      slug: 'florida-blue',
       name: 'Florida Blue Member App',
       tag: 'Healthcare · Web + iOS + Android',
       year: '2023 — 2025',
@@ -138,6 +142,7 @@ export const data = {
       stack: ['React', 'React Native', 'TypeScript', 'Redux'],
     },
     {
+      slug: 'baylor-scott-white',
       name: 'Baylor Scott & White',
       tag: 'Healthcare · Mobile',
       year: '2020-2021',
@@ -151,6 +156,7 @@ export const data = {
       stack: ['React Native', 'CSS animations', 'Redux', 'Gesture Handler'],
     },
     {
+      slug: 'track-it-event-manager',
       name: 'Track-IT + Event Manager',
       tag: 'Internal · Mentorship',
       year: '2020',

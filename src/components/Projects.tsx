@@ -1,11 +1,12 @@
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { data, type Project } from '../data';
 import { SectionLabel } from './SectionLabel';
 
 export function Projects() {
   return (
     <section className="aur-section" id="projects">
-      <SectionLabel num="04" title="Selected work" caption="case studies · 2022–2025" />
+      <SectionLabel num="04" title="Selected work" caption="case studies · 2020–2025" />
       <div className="aur-proj-grid">
         {data.projects.map((p, i) => (
           <ProjectCard key={p.name} p={p} idx={i} />
@@ -16,7 +17,7 @@ export function Projects() {
 }
 
 function ProjectCard({ p, idx }: { p: Project; idx: number }) {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLAnchorElement>(null);
   const raf = useRef<number | null>(null);
   const pending = useRef<{ x: number; y: number } | null>(null);
 
@@ -34,7 +35,7 @@ function ProjectCard({ p, idx }: { p: Project; idx: number }) {
     el.style.setProperty('--my', `${(py + 0.5) * 100}%`);
   };
 
-  const onMove = (e: React.MouseEvent<HTMLElement>) => {
+  const onMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     pending.current = { x: e.clientX, y: e.clientY };
     if (raf.current == null) raf.current = requestAnimationFrame(flush);
   };
@@ -49,8 +50,9 @@ function ProjectCard({ p, idx }: { p: Project; idx: number }) {
     el.style.setProperty('--ry', '0deg');
   };
   return (
-    <article
+    <Link
       ref={ref}
+      to={`/work/${p.slug}`}
       data-mag
       className={`aur-proj aur-proj-${idx === 0 ? 'wide' : 'reg'}`}
       onMouseMove={onMove}
@@ -82,9 +84,9 @@ function ProjectCard({ p, idx }: { p: Project; idx: number }) {
       <div className="aur-proj-cta">
         Read case study
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M7 17L17 7M9 7h8v8" />
+          <path d="M5 12h14M13 6l6 6-6 6" />
         </svg>
       </div>
-    </article>
+    </Link>
   );
 }
