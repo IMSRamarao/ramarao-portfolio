@@ -66,7 +66,7 @@ function ConstellationSVG({ items }: { items: string[] }) {
             y1={p.y}
             x2={next.x}
             y2={next.y}
-            className="aur-const-line aur-line-fade"
+            className="aur-const-line"
             style={{ animationDelay: `${i * 80}ms` }}
           />
         );
