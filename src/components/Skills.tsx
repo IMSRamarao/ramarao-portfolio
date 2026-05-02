@@ -66,18 +66,15 @@ function ConstellationSVG({ items }: { items: string[] }) {
             y1={p.y}
             x2={next.x}
             y2={next.y}
-            stroke="rgba(192,132,252,0.18)"
-            strokeWidth="1"
-            strokeDasharray="2 4"
-            className="aur-line-fade"
+            className="aur-const-line aur-line-fade"
             style={{ animationDelay: `${i * 80}ms` }}
           />
         );
       })}
       {pts.map((p, i) => (
         <g key={`g${i}`} className="aur-star" style={{ animationDelay: `${p.delay}ms` }}>
-          <circle cx={p.x} cy={p.y} r="22" fill="url(#auroraStar)" opacity="0.5" />
-          <circle cx={p.x} cy={p.y} r="3.5" fill="#f5d0fe" />
+          <circle cx={p.x} cy={p.y} r="22" className="aur-const-halo" />
+          <circle cx={p.x} cy={p.y} r="3.5" className="aur-const-dot" />
           <text
             x={p.x}
             y={p.y + 28}

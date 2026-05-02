@@ -80,11 +80,9 @@ function MCPDiagram({ pulseKey, activeIdx }: { pulseKey: number; activeIdx: numb
         y1={client.y}
         x2={server.x}
         y2={server.y}
-        stroke="rgba(192,132,252,0.35)"
-        strokeWidth="1.5"
-        strokeDasharray="3 3"
+        className="aur-mcp-trunk"
       />
-      <circle r="4" fill="#f0abfc" key={`p${pulseKey}`}>
+      <circle r="4" className="aur-mcp-pulse" key={`p${pulseKey}`}>
         <animateMotion
           dur="1.6s"
           repeatCount="1"
@@ -99,11 +97,10 @@ function MCPDiagram({ pulseKey, activeIdx }: { pulseKey: number; activeIdx: numb
             y1={server.y}
             x2={t.x}
             y2={t.y}
-            stroke={i === activeIdx ? 'rgba(240,171,252,0.9)' : 'rgba(167,139,250,0.18)'}
-            strokeWidth={i === activeIdx ? 1.6 : 1}
+            className={i === activeIdx ? 'aur-mcp-toolline aur-mcp-toolline-on' : 'aur-mcp-toolline'}
           />
           {i === activeIdx && (
-            <circle r="3" fill="#f0abfc" key={`tp${pulseKey}-${i}`}>
+            <circle r="3" className="aur-mcp-pulse" key={`tp${pulseKey}-${i}`}>
               <animateMotion
                 dur="1s"
                 repeatCount="1"
@@ -119,8 +116,6 @@ function MCPDiagram({ pulseKey, activeIdx }: { pulseKey: number; activeIdx: numb
               height="24"
               rx="6"
               className={i === activeIdx ? 'aur-mcp-tool-rect aur-mcp-tool-rect-on' : 'aur-mcp-tool-rect'}
-              stroke="rgba(192,132,252,0.45)"
-              strokeWidth="0.6"
             />
             <text
               x="4"
@@ -135,8 +130,8 @@ function MCPDiagram({ pulseKey, activeIdx }: { pulseKey: number; activeIdx: numb
         </g>
       ))}
       <g>
-        <circle cx={client.x} cy={client.y} r="34" fill="rgba(34,211,238,0.18)" />
-        <circle cx={client.x} cy={client.y} r="22" fill="url(#mcpNode)" opacity="0.85" />
+        <circle cx={client.x} cy={client.y} r="34" className="aur-mcp-halo aur-mcp-halo-client" />
+        <circle cx={client.x} cy={client.y} r="22" fill="url(#mcpNode)" opacity="0.92" />
         <text
           x={client.x}
           y={client.y + 4}
@@ -160,7 +155,7 @@ function MCPDiagram({ pulseKey, activeIdx }: { pulseKey: number; activeIdx: numb
         </text>
       </g>
       <g>
-        <circle cx={server.x} cy={server.y} r="42" fill="rgba(240,171,252,0.18)">
+        <circle cx={server.x} cy={server.y} r="42" className="aur-mcp-halo aur-mcp-halo-server">
           <animate attributeName="r" values="42;46;42" dur="2.2s" repeatCount="indefinite" />
         </circle>
         <circle cx={server.x} cy={server.y} r="28" fill="url(#mcpNode)" />
