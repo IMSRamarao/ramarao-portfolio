@@ -13,6 +13,20 @@
       rel="stylesheet"
     />
     <title>Ramarao Iragavarapu — Senior Frontend Developer</title>
+    <script>
+      // Initial-paint theme — runs before React mounts
+      (function () {
+        try {
+          var t = localStorage.getItem('aur-theme');
+          if (t === 'light') {
+            document.documentElement.classList.add('aur-light-pre');
+            document.documentElement.style.background = '#f5f3ff';
+          } else {
+            document.documentElement.style.background = '#0a0814';
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

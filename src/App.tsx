@@ -7,11 +7,21 @@ import { HomePage } from './pages/HomePage';
 import { ArticlePage } from './pages/ArticlePage';
 import { DemoPage } from './pages/DemoPage';
 
+function readTheme(): boolean {
+  if (typeof window === 'undefined') return true;
+  const saved = localStorage.getItem('aur-theme');
+  if (saved === 'light') return false;
+  if (saved === 'dark') return true;
+  return true;
+}
+
 export default function App() {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(readTheme);
 
   useEffect(() => {
     document.body.style.background = dark ? '#0a0814' : '#f5f3ff';
+    document.documentElement.classList.toggle('aur-light-pre', !dark);
+    localStorage.setItem('aur-theme', dark ? 'dark' : 'light');
   }, [dark]);
 
   return (

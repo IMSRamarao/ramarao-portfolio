@@ -118,14 +118,14 @@ function MCPDiagram({ pulseKey, activeIdx }: { pulseKey: number; activeIdx: numb
               width="232"
               height="24"
               rx="6"
-              fill={i === activeIdx ? 'rgba(240,171,252,0.18)' : 'rgba(255,255,255,0.04)'}
-              stroke="rgba(192,132,252,0.35)"
+              className={i === activeIdx ? 'aur-mcp-tool-rect aur-mcp-tool-rect-on' : 'aur-mcp-tool-rect'}
+              stroke="rgba(192,132,252,0.45)"
               strokeWidth="0.6"
             />
             <text
               x="4"
               y="3"
-              fill="rgba(245,243,255,0.92)"
+              className="aur-mcp-tool-text"
               fontSize="11"
               fontFamily="ui-monospace, monospace"
             >
@@ -152,7 +152,7 @@ function MCPDiagram({ pulseKey, activeIdx }: { pulseKey: number; activeIdx: numb
           x={client.x}
           y={client.y + 56}
           textAnchor="middle"
-          fill="rgba(245,243,255,0.65)"
+          className="aur-mcp-node-sub"
           fontSize="10"
           fontFamily="ui-monospace"
         >
@@ -179,7 +179,7 @@ function MCPDiagram({ pulseKey, activeIdx }: { pulseKey: number; activeIdx: numb
           x={server.x}
           y={server.y + 60}
           textAnchor="middle"
-          fill="rgba(245,243,255,0.65)"
+          className="aur-mcp-node-sub"
           fontSize="10"
           fontFamily="ui-monospace"
         >

@@ -82,7 +82,7 @@ function ConstellationSVG({ items }: { items: string[] }) {
             x={p.x}
             y={p.y + 28}
             textAnchor="middle"
-            fill="rgba(245,243,255,0.92)"
+            className="aur-constellation-label"
             fontSize="13"
             fontFamily="ui-sans-serif, system-ui"
             fontWeight="500"
