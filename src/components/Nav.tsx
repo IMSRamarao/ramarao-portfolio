@@ -7,14 +7,16 @@ type Props = {
   setDark: (d: boolean) => void;
 };
 
-const items: [label: string, id: string][] = [
-  ['About', 'about'],
-  ['Work', 'work'],
-  ['MCP', 'mcp-lab'],
-  ['Live', 'mcp-live'],
-  ['DS', 'ds'],
-  ['Writing', 'writing'],
-  ['Contact', 'contact'],
+type NavItem = { label: string; kind: 'anchor'; id: string } | { label: string; kind: 'route'; to: string };
+
+const items: NavItem[] = [
+  { label: 'About', kind: 'anchor', id: 'about' },
+  { label: 'Work', kind: 'anchor', id: 'work' },
+  { label: 'MCP', kind: 'anchor', id: 'mcp-lab' },
+  { label: 'Demo', kind: 'route', to: '/demo' },
+  { label: 'DS', kind: 'anchor', id: 'ds' },
+  { label: 'Writing', kind: 'anchor', id: 'writing' },
+  { label: 'Contact', kind: 'anchor', id: 'contact' },
 ];
 
 export function Nav({ dark, setDark }: Props) {
@@ -66,11 +68,25 @@ export function Nav({ dark, setDark }: Props) {
         </span>
       </div>
       <nav className="aur-nav-links">
-        {items.map(([label, id]) => (
-          <a key={label} data-mag href={`/#${id}`} onClick={onClick(id)}>
-            {label}
-          </a>
-        ))}
+        {items.map((item) =>
+          item.kind === 'route' ? (
+            <a
+              key={item.label}
+              data-mag
+              href={item.to}
+              onClick={(e) => {
+                e.preventDefault();
+                navigate(item.to);
+              }}
+            >
+              {item.label}
+            </a>
+          ) : (
+            <a key={item.label} data-mag href={`/#${item.id}`} onClick={onClick(item.id)}>
+              {item.label}
+            </a>
+          ),
+        )}
       </nav>
       <div className="aur-nav-right">
         <button

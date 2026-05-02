@@ -5,6 +5,7 @@ import { Cursor } from './components/Cursor';
 import { Nav } from './components/Nav';
 import { HomePage } from './pages/HomePage';
 import { ArticlePage } from './pages/ArticlePage';
+import { DemoPage } from './pages/DemoPage';
 
 export default function App() {
   const [dark, setDark] = useState(true);
@@ -22,6 +23,7 @@ export default function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/demo" element={<DemoPage />} />
             <Route path="/writing/:slug" element={<ArticlePage />} />
             <Route path="*" element={<ArticlePage />} />
           </Routes>

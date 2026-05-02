@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { run } from '../mcp/engine';
 import { suggestedQuestions } from '../mcp/router';
 import type { DemoEvent, WireMessage } from '../mcp/types';
-import { SectionLabel } from './SectionLabel';
 
 type LogEntry =
   | { id: number; kind: 'thought'; text: string }
@@ -74,15 +73,7 @@ export function McpDemo() {
   };
 
   return (
-    <section className="aur-section aur-mcp-demo" id="mcp-live">
-      <SectionLabel num="06" title="MCP Live" caption="ask anything · watch the protocol" />
-      <p className="aur-mcp-demo-intro">
-        A faithful simulation of an MCP server that exposes my portfolio as 7 tools. Ask a
-        question, watch the JSON-RPC traffic, and see how Claude routes intent into tool calls.
-        Every byte of the protocol is real-shape — the only thing simulated is the model's
-        decision layer.
-      </p>
-
+    <section className="aur-mcp-demo" id="mcp-live">
       <div className="aur-mcp-demo-grid">
         <div className="aur-glass aur-mcp-demo-input">
           <div className="aur-mcp-demo-h">
