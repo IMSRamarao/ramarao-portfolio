@@ -18,7 +18,6 @@ export type Project = {
 };
 export type MCPTool = { name: string; desc: string };
 export type Testimonial = { quote: string; author: string; org: string };
-export type Article = { title: string; read: string; tag: string };
 export type Certification = { title: string; issuer: string; year: string; tag: string };
 
 export const data = {
@@ -211,13 +210,6 @@ export const data = {
       org: 'Dream DS',
     },
   ] as Testimonial[],
-
-  articles: [
-    { title: 'Designing components Claude actually understands', read: '8 min', tag: 'AI · DS' },
-    { title: 'Reanimated 3: a worklet mental model that sticks', read: '11 min', tag: 'Mobile' },
-    { title: "Why your design tokens shouldn't ship as CSS variables", read: '6 min', tag: 'DS' },
-    { title: 'MCP from scratch in 200 lines of TypeScript', read: '14 min', tag: 'AI' },
-  ] as Article[],
 
   certifications: [
     { title: 'Claude 101', issuer: 'Anthropic', year: '2025', tag: 'AI' },
