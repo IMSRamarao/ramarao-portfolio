@@ -67,31 +67,13 @@ export const data = {
       stack: ['React', 'TypeScript', 'MCP', 'MUI', 'Storybook', 'Figma'],
     },
     {
-      year: 'Apr 2024 — Jun 2025',
-      company: 'Zia Global',
+      year: 'Jan 2023 — Jun 2025',
+      company: 'Florida Blue / BCBS',
       role: 'Senior React / React Native Developer',
-      location: 'Florida Blue / BCBS (client)',
+      location: 'Contracted via SmartInt → Lanco Global → Zia Global · Remote',
       summary:
-        "Continued the Florida Blue engagement under a new employer. Shipped production pages across the in-network and out-of-network flows on both web and React Native — provider list pages, doctor profile pages, single and multi-claim views, tabbed cost details, compare-providers, select / edit-providers, and a map view for provider locations. Wrapped up the React upgrade work and kept the security posture clean.",
-      stack: ['React', 'React Native', 'TypeScript', 'Redux'],
-    },
-    {
-      year: 'Jul 2023 — Apr 2024',
-      company: 'Lanco Global Systems',
-      role: 'Senior React / React Native Developer',
-      location: 'Florida Blue / BCBS (client)',
-      summary:
-        "Same Florida Blue engagement, different employer. Continued building out the public-facing member application across web and React Native — in-network and out-of-network search flows, provider list and detail pages, claims views, and the tab-driven cost / compare / select / edit / map experience. JIRA-driven team, regular production releases.",
-      stack: ['React', 'React Native', 'TypeScript', 'Redux'],
-    },
-    {
-      year: 'Jan 2023 — Apr 2023',
-      company: 'SmartInt Inc',
-      role: 'Senior React / React Native Developer',
-      location: 'Florida Blue / BCBS (client)',
-      summary:
-        "Started the Florida Blue engagement during my CPT. Public-facing healthcare member app, both web and React Native mobile. Redesigned the out-of-network pages flow and built the foundations for the in-network provider search across multiple pages. Drove React version upgrades and resolved a long backlog of security vulnerabilities.",
-      stack: ['React', 'React Native', 'TypeScript', 'Redux'],
+        "2.5 years on the same Florida Blue engagement across three successive contracting employers — codebase and team continuous throughout. Shipped the public-facing member application end-to-end on both web and React Native: in-network and out-of-network search flows, provider list pages, doctor profile pages, single and multi-claim views, and a tabbed provider experience covering cost details, compare providers, select / edit providers, and a live map view. Drove React major-version upgrades and resolved a long backlog of security vulnerabilities while sustaining feature velocity. Mentored 2 developers — PR reviews, story assignment from the JIRA backlog, daily pairing, and helping them land their first production features cleanly.",
+      stack: ['React', 'React Native', 'TypeScript', 'Redux', 'REST APIs'],
     },
     {
       year: 'Dec 2019 — Dec 2021',
@@ -146,11 +128,11 @@ export const data = {
       tag: 'Healthcare · Web + iOS + Android',
       year: '2023 — 2025',
       summary:
-        "Florida Blue's public-facing member application — both web and React Native mobile from a shared design language. Across 2.5 years and three employers (SmartInt → Lanco Global → Zia Global), I shipped the in-network and out-of-network search flows end to end: provider list pages, doctor profile pages, single-claim and multi-claim views, and a tabbed provider experience covering cost details, compare providers, select providers, edit providers, and a live map view of where each provider is located. Drove React version upgrades and cleared a long backlog of CVEs alongside feature work. Every page is in production.",
+        "Florida Blue's public-facing member application — both web and React Native mobile from a shared design language. Across 2.5 years and three employers (SmartInt → Lanco Global → Zia Global), I shipped the in-network and out-of-network search flows end to end: provider list pages, doctor profile pages, single-claim and multi-claim views, and a tabbed provider experience covering cost details, compare providers, select providers, edit providers, and a live map view of where each provider is located. Drove React version upgrades and cleared a long backlog of CVEs alongside feature work. Mentored 2 developers — PR reviews, story assignment, daily pairing. Every page is in production.",
       metrics: [
         { v: 'Prod', l: 'all pages live' },
         { v: 'Web + RN', l: 'unified UX' },
-        { v: 'CVEs', l: 'cleared' },
+        { v: '2', l: 'devs mentored' },
         { v: '2.5y', l: 'on this engagement' },
       ],
       stack: ['React', 'React Native', 'TypeScript', 'Redux'],
