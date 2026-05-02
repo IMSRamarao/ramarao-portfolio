@@ -39,14 +39,13 @@ export function About() {
                 <span className="aur-bullet aur-b-em" /> Senior FE @ <strong>UWM</strong>
               </div>
               <div>
-                <span className="aur-bullet" /> Building <strong>Dream DS</strong> + MCP
+                <span className="aur-bullet" /> Building <strong>Dream DS</strong> + Dream MCP
               </div>
               <div>
-                <span className="aur-bullet" /> Reading{' '}
-                <em>"Designing Data-Intensive Applications"</em>
+                <span className="aur-bullet" /> Authored <strong>~20</strong> of 86 components
               </div>
               <div>
-                <span className="aur-bullet" /> Tinkering with Claude 4.6 + tool calling
+                <span className="aur-bullet" /> Open to senior FE / RN / DS / AI roles
               </div>
             </div>
           </div>

@@ -35,25 +35,26 @@ export const data = {
   },
 
   story: [
-    "I'm a frontend engineer who fell for the craft seven years ago in a small office in Kakinada, India — converting wireframes into interfaces that actually felt good to use.",
-    "Since then I've shipped React Native apps for mortgage lenders and healthcare giants, built design systems that 90+ engineers depend on, and most recently been deep in the AI weeds — wiring up MCP servers that turn our component library into something Claude can reason about.",
-    'I care about the small stuff. The transition that lasts 240ms instead of 300. The empty state that explains itself. The component API a junior dev gets right on the first try.',
+    "My career started in 2018 as an intern at Krify Solutions in Kakinada, India — full MEAN stack, building a real end-to-end project from scratch to prove I'd actually learned the material.",
+    "Atos Syntel hired me right out of college in December 2019 and put me through intensive React and React Native training. Two demo projects later — Track-IT and an event management app where I mentored ten juniors through the full Agile loop — they trusted me on Baylor Scott & White Hospital's app: a Virtual Waiting Room with hotspot-driven animations and a Prayer Wall with full social CRUD and gesture-driven motion.",
+    "I came to the US in December 2021 for my Master's in Computer & Information Sciences. CPT in early 2023 took me to SmartInt on the Florida Blue / BCBS engagement — public-facing healthcare app, redesigned out-of-network pages flow, new in-network provider search across web and React Native, plus React upgrades and CVE remediation.",
+    "Since June 2025 I've been at United Wholesale Mortgage as a Senior Frontend Developer, building the Dream Design System (86 components, 560+ tokens, 607 icons, dual theme palettes) and the Dream MCP server that lets Claude scaffold complete pages from one prompt using only DS primitives. About 20 of the more complex components are mine — gauge, charts, PDF viewer, audio + video players, date-range picker, autocomplete, stepper. The fun part is making them read identically to a model and to a human.",
   ],
 
   metrics: [
     { value: '7+', label: 'Years shipping' },
-    { value: '86', label: 'Components in DS' },
-    { value: '12', label: 'MCP tools wired' },
-    { value: '4', label: 'Apps in stores' },
+    { value: '86', label: 'DS components' },
+    { value: '560+', label: 'Design tokens' },
+    { value: '20+', label: 'Built from scratch' },
   ] as Metric[],
 
   skills: {
-    Frontend: ['React 19', 'TypeScript', 'Next.js', 'Vite', 'Tailwind', 'CSS Houdini'],
-    Mobile: ['React Native', 'Expo', 'Reanimated', 'Flutter', 'Detox'],
-    'AI / MCP': ['MCP Servers', 'Claude 4.6', 'Copilot', 'Codeium', 'RAG', 'Tool calling'],
-    'Design Systems': ['Tokens', 'Storybook', 'Figma API', 'A11y', 'Theming', 'Variants'],
-    'State & Data': ['Redux Toolkit', 'Redux Saga', 'Redux Thunk', 'Zustand', 'TanStack Query', 'Apollo', 'tRPC'],
-    Testing: ['Vitest', 'Jest', 'Playwright', 'Detox', 'Mocha'],
+    Frontend: ['React 19', 'TypeScript', 'Next.js', 'Vite', 'Tailwind', 'MUI', 'CSS animations'],
+    Mobile: ['React Native', 'Expo', 'Reanimated', 'Gesture Handler', 'Detox'],
+    'AI / MCP': ['Dream MCP', 'Claude', 'MCP Servers', 'Tool calling', 'Codeium', 'Copilot'],
+    'Design Systems': ['Tokens', 'Theming', 'Storybook', 'Figma', 'A11y', 'MUI extensions'],
+    'State & Data': ['Redux Toolkit', 'Redux Saga', 'Redux Thunk', 'Apollo', 'Context API', 'TanStack Query'],
+    Testing: ['Detox', 'Jest', 'Mocha', 'Vitest'],
   } as Record<string, string[]>,
 
   experience: [
@@ -63,153 +64,126 @@ export const data = {
       role: 'Senior Frontend Developer',
       location: 'Pontiac, MI',
       summary:
-        'Leading frontend on broker-facing iOS, Android and web tooling used by thousands of mortgage professionals daily. Building the Dream DS MCP server that turns our 86-component design system into something Claude can scaffold with.',
-      stack: ['React', 'React Native', 'TypeScript', 'MCP', 'Reanimated'],
-    },
-    {
-      year: 'Apr 2024 — Jun 2025',
-      company: 'Zia Global',
-      role: 'React Native Developer',
-      location: 'Florida Blue (client)',
-      summary:
-        'Healthcare member app for Florida Blue — charts, a theming engine (light/dark/high-contrast), and an end-to-end Detox suite that catches regressions before TestFlight. Introduced Codeium across the team to speed up daily work.',
-      stack: ['React Native', 'Context', 'SVG Charts', 'Redux-Saga', 'Codeium'],
-    },
-    {
-      year: 'Jul 2023 — Apr 2024',
-      company: 'Lanco Global Systems',
-      role: 'React Native Developer',
-      location: 'Florida Blue (client)',
-      summary:
-        'Continued the Florida Blue engagement — rich UI mobile work, custom hooks, theming, and Detox + Mocha E2E coverage. JIRA-driven team of 8.',
-      stack: ['React Native', 'TypeScript', 'Detox', 'Mocha'],
+        "Building the Dream Design System and the Dream MCP. 86 components, 560+ tokens, 607 icons, dual theme palettes. I've authored about 20 of the more complex components — gauge, bar/pie charts, PDF viewer, audio and video players, date-range picker, autocomplete, stepper, action icon, time picker, slider — most extended from MUI primitives and re-tuned to our type, color, and motion language. Touched and tweaked virtually every component in the catalog at some point.",
+      stack: ['React', 'TypeScript', 'MCP', 'MUI', 'Storybook', 'Figma'],
     },
     {
       year: 'Jan 2023 — Apr 2023',
-      company: 'Smart INT',
-      role: 'React Developer',
-      location: 'Irving, TX',
+      company: 'SmartInt Inc',
+      role: 'Senior React / React Native Developer',
+      location: 'Florida Blue / BCBS (client)',
       summary:
-        'Frontline safety detection platform — Spring REST integrations, real-time dashboards, Splunk health overlays for wearables and RTLS data.',
-      stack: ['React', 'Redux', 'Spring REST'],
+        "Public-facing healthcare member app for Florida Blue, both web and React Native mobile. Redesigned the out-of-network pages flow end to end and built a new in-network provider search experience spanning multiple screens. Drove React version upgrades across the codebase and resolved a long backlog of security vulnerabilities while shipping velocity stayed steady.",
+      stack: ['React', 'React Native', 'TypeScript', 'Redux'],
+    },
+    {
+      year: 'Dec 2021 — 2023',
+      company: "Master's program",
+      role: 'M.S., Computer & Information Sciences',
+      location: 'United States',
+      summary:
+        "Two-year master's covering web architecture, distributed systems, and applied ML — bridging the gap between an engineer who ships and an engineer who can reason about why a system behaves the way it does.",
+      stack: ['Coursework', 'Research', 'Software Engineering'],
     },
     {
       year: 'Dec 2019 — Dec 2021',
-      company: 'Atos',
+      company: 'Atos Syntel',
       role: 'React Native Developer',
       location: 'Pune, India',
       summary:
-        'First taste of cross-platform at scale. Built the theming foundation, custom hooks library, and chart primitives the team still uses.',
-      stack: ['React Native', 'Redux', 'JSX', 'SVG'],
+        "Joined right after my Bachelor's and went through intensive React + React Native training. Shipped two internal demo projects — Track-IT (asset management) and an event management system where I mentored a team of ten juniors through the full Agile loop: planning, standups, refinement, retros, demos. Then moved to Baylor Scott & White Hospital's app where I built a Virtual Waiting Room with hotspot-driven animations and the Prayer Wall — post / like / comment / edit / swipe-delete with all the gesture-driven micro-interactions. CSS animation is where I sharpened.",
+      stack: ['React Native', 'Redux', 'CSS animations', 'Agile / mentoring'],
     },
     {
-      year: 'May 2018 — Jun 2019',
-      company: 'Krify Software',
-      role: 'MEAN Stack Developer',
+      year: '2018 — Mar 2019',
+      company: 'Krify Solutions',
+      role: 'MEAN Stack Intern → Developer',
       location: 'Kakinada, India',
       summary:
-        "Where it all started. Wireframes → components → shipped product. Learned what 'reusable' actually means.",
-      stack: ['Angular', 'React Native', 'Babel', 'Redux'],
+        "My first job. Learned the full MEAN stack — Mongo, Express, Angular, Node — and built an end-to-end project from scratch to test what I'd actually absorbed. Where I learned what 'shipped' means.",
+      stack: ['Angular', 'Node.js', 'Express', 'MongoDB'],
     },
   ] as Experience[],
 
   projects: [
     {
       name: 'Dream Design System',
-      tag: 'Design System · MCP',
+      tag: 'Design System',
       year: '2025',
       summary:
-        "An 86-component design system with a Claude-powered MCP server that exposes every component, token, icon, and usage guideline as a tool. Engineers ask 'how do I build a settings page' and get back a wired-up scaffold.",
+        "United Wholesale Mortgage's design system: dual theme palettes, 560+ tokens, 607 icons, 86 React components — used across every product in the org. I authored ~20 of the more complex pieces (gauge, bar/pie charts, PDF viewer, audio and video players, date-range picker, autocomplete, stepper, action icon, time picker, slider) — most extended from MUI primitives and re-tuned to our type, color, and motion language. Touched virtually every component in the catalog at some point.",
       metrics: [
         { v: '86', l: 'components' },
-        { v: '240', l: 'tokens' },
-        { v: '12', l: 'MCP tools' },
-        { v: '9', l: 'products consuming' },
+        { v: '560+', l: 'tokens' },
+        { v: '607', l: 'icons' },
+        { v: '~20', l: 'I authored' },
       ],
-      stack: ['React', 'TypeScript', 'MCP', 'Storybook', 'Figma API'],
+      stack: ['React', 'TypeScript', 'MUI', 'Storybook', 'Figma'],
     },
     {
-      name: 'Sentinel Wearables',
-      tag: 'Web + IoT',
+      name: 'Dream MCP',
+      tag: 'AI · MCP',
       year: '2025',
       summary:
-        'Real-time safety dashboard for industrial wearables. Live RTLS map with hundreds of moving entities, alert triage, and a custom WebGL heatmap.',
+        "An MCP server that exposes the entire Dream DS — every component, every token, every usage guideline — as tools Claude can call. Engineers describe a page in one prompt; Claude scaffolds it end to end using only DS primitives, our spacing scale, our type ramp, and the right semantic colors. The output looks like it was written by a senior on the team.",
       metrics: [
-        { v: '<60ms', l: 'p95 alert latency' },
-        { v: '1.2k', l: 'concurrent devices' },
-        { v: '0 jank', l: 'at 60 fps' },
+        { v: '1 prompt', l: 'to a full page' },
+        { v: '86', l: 'components callable' },
+        { v: '0', l: 'off-system colors' },
       ],
-      stack: ['React', 'WebGL', 'WebSockets', 'TypeScript'],
+      stack: ['MCP', 'TypeScript', 'Claude', 'JSON-RPC'],
     },
     {
-      name: 'UWM Broker Mobile',
-      tag: 'iOS + Android',
-      year: '2024',
-      summary:
-        'Lender-facing React Native app for daily mortgage operations. Re-architected list screens with a virtualization layer; cut TTI by 4x.',
-      metrics: [
-        { v: '4×', l: 'faster TTI' },
-        { v: '4.8', l: 'store rating' },
-        { v: '86%', l: 'test coverage' },
-      ],
-      stack: ['React Native', 'Reanimated', 'Detox', 'TypeScript'],
-    },
-    {
-      name: 'Florida Blue Members',
-      tag: 'iOS + Android',
+      name: 'Florida Blue Member App',
+      tag: 'Healthcare · Web + iOS + Android',
       year: '2023',
       summary:
-        'Healthcare member app. Built the theming runtime (light / dark / high-contrast) and SVG-based claims charts. Accessibility-first from day one.',
+        "Florida Blue's public-facing member application — both web and React Native mobile from a shared design language. Redesigned the out-of-network pages flow end to end and built a new in-network provider search experience spanning multiple screens. Drove React version upgrades across the codebase and resolved a long backlog of security vulnerabilities.",
       metrics: [
-        { v: 'AAA', l: 'WCAG contrast' },
-        { v: '3', l: 'themes' },
-        { v: '62', l: 'screens' },
+        { v: 'Web + RN', l: 'unified flow' },
+        { v: 'OON', l: 'pages redesigned' },
+        { v: 'CVEs', l: 'cleared' },
       ],
-      stack: ['React Native', 'Context API', 'SVG', 'Saga'],
+      stack: ['React', 'React Native', 'TypeScript', 'Redux'],
     },
     {
-      name: 'Track-IT',
-      tag: 'Web + Mobile',
-      year: '2022',
+      name: 'Baylor Scott & White',
+      tag: 'Healthcare · Mobile',
+      year: '2020-2021',
       summary:
-        'Asset management system — request flow, admin approvals, locker management. Same codebase deployed to web and React Native.',
+        "Member-facing healthcare app for one of the largest hospital systems in Texas. I built two anchor features. The Virtual Waiting Room — tap a hotspot and a layered animation explains what's happening behind the scenes during the visit. The Prayer Wall — a community feed where users post prayers and others can like, comment, edit, or swipe to delete with smooth gesture-driven motion. CSS animation is where I really sharpened.",
       metrics: [
-        { v: '1', l: 'shared codebase' },
-        { v: '3', l: 'user roles' },
+        { v: '2', l: 'anchor features' },
+        { v: 'Gestures', l: 'native feel' },
+        { v: 'CSS', l: "where I sharpened" },
       ],
-      stack: ['React', 'React Native', 'Heroku'],
+      stack: ['React Native', 'CSS animations', 'Redux', 'Gesture Handler'],
+    },
+    {
+      name: 'Track-IT + Event Manager',
+      tag: 'Internal · Mentorship',
+      year: '2020',
+      summary:
+        'Two demo projects at Atos — Track-IT (an asset management system) and an event management app — where I mentored a team of ten juniors through the full Agile lifecycle: sprint planning, standups, refinement, demos, retros. The product was secondary; the muscle memory the team built was the real shipped artifact.',
+      metrics: [
+        { v: '10', l: 'devs mentored' },
+        { v: '2', l: 'demo apps shipped' },
+        { v: 'Full', l: 'Agile loop' },
+      ],
+      stack: ['React', 'React Native', 'Redux', 'Agile'],
     },
   ] as Project[],
 
   mcpTools: [
-    { name: 'ds.getComponent', desc: 'Returns props, variants, stories for any of 86 components.' },
-    { name: 'ds.searchTokens', desc: 'Fuzzy-search 240+ design tokens by name or value.' },
+    { name: 'ds.getComponent', desc: 'Returns props, variants, and example usage for any of the 86 components.' },
+    { name: 'ds.searchTokens', desc: 'Fuzzy-search 560+ design tokens by name, value, or category.' },
     { name: 'ds.scaffoldScreen', desc: 'Generate a wired-up screen from a high-level prompt.' },
     { name: 'ds.checkA11y', desc: 'Static analysis of a JSX tree against WCAG rules.' },
-    { name: 'ds.getIcon', desc: 'Return SVG and React import for any of 320 icons.' },
-    { name: 'ds.diffVersions', desc: 'Compare two DS versions; surface breaking changes.' },
+    { name: 'ds.getIcon', desc: 'Return SVG and React import for any of the 607 icons.' },
+    { name: 'ds.applyTheme', desc: 'Switch a tree between the two theme palettes.' },
   ] as MCPTool[],
 
-  testimonials: [
-    {
-      quote:
-        'Ramarao rebuilt our most-used screen and cut latency by 75%. The diff was 200 lines — and read like prose.',
-      author: 'Engineering Lead',
-      org: 'United Wholesale Mortgage',
-    },
-    {
-      quote:
-        "He doesn't just ship features — he leaves the codebase better. Our junior devs onboard in days because of the patterns he set.",
-      author: 'Staff Engineer',
-      org: 'Smart INT',
-    },
-    {
-      quote:
-        "The MCP server he built changed how our team thinks about AI in our workflow. It's not a chatbot, it's a teammate.",
-      author: 'Design Systems Lead',
-      org: 'Dream DS',
-    },
-  ] as Testimonial[],
+  testimonials: [] as Testimonial[],
 
   certifications: [
     { title: 'Claude 101', issuer: 'Anthropic', year: '2025', tag: 'AI' },

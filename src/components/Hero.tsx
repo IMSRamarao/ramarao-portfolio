@@ -9,7 +9,7 @@ const lines: Line[] = [
   { p: '$ ', t: 'stack --primary', d: 60 },
   { p: '→ ', t: 'react · react native · typescript · mcp · design systems', d: 22 },
   { p: '$ ', t: 'currently', d: 70 },
-  { p: '→ ', t: 'shipping a Claude-powered design system at UWM', d: 28 },
+  { p: '→ ', t: 'shipping the Dream DS + Dream MCP at UWM', d: 28 },
   { p: '$ ', t: 'open_to_work', d: 80 },
   { p: '→ ', t: 'yes ✶ react / RN / DS / AI roles ✶ remote or hybrid', d: 28 },
 ];

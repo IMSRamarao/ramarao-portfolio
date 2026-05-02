@@ -56,7 +56,7 @@ function MCPDiagram({ pulseKey, activeIdx }: { pulseKey: number; activeIdx: numb
   const W = 640,
     H = 380;
   const client = { x: 60, y: H / 2, label: 'Claude', sub: 'claude-4.6' };
-  const server = { x: 240, y: H / 2, label: 'MCP', sub: 'design-system' };
+  const server = { x: 240, y: H / 2, label: 'MCP', sub: 'dream-mcp' };
   const tools = data.mcpTools.map((t, i) => ({
     ...t,
     x: 380,

@@ -5,7 +5,6 @@ import { Experience } from '../components/Experience';
 import { Projects } from '../components/Projects';
 import { MCPLab } from '../components/MCPLab';
 import { DesignSystem } from '../components/DesignSystem';
-import { Testimonials } from '../components/Testimonials';
 import { Certifications } from '../components/Certifications';
 import { Writing } from '../components/Writing';
 import { Contact } from '../components/Contact';
@@ -20,7 +19,6 @@ export function HomePage() {
       <Projects />
       <MCPLab />
       <DesignSystem />
-      <Testimonials />
       <Certifications />
       <Writing />
       <Contact />
