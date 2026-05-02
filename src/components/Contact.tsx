@@ -12,7 +12,7 @@ export function Contact() {
           </span>
           <span>I'd love to hear it.</span>
         </h2>
-        <div className="aur-contact-grid aur-contact-grid-3">
+        <div className="aur-contact-grid">
           <a className="aur-contact-card" data-mag href={`mailto:${data.email}`}>
             <span className="aur-contact-l">Email</span>
             <span className="aur-contact-v">{data.email}</span>
@@ -36,6 +36,16 @@ export function Contact() {
           >
             <span className="aur-contact-l">GitHub</span>
             <span className="aur-contact-v">@imsramarao</span>
+          </a>
+          <a
+            className="aur-contact-card aur-contact-card-resume"
+            data-mag
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="aur-contact-l">Resume · PDF ↓</span>
+            <span className="aur-contact-v">Download / Open in new tab</span>
           </a>
         </div>
         <div className="aur-foot">

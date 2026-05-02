@@ -70,8 +70,17 @@ export function Hero() {
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </a>
-            <a className="aur-btn aur-btn-ghost" data-mag href="#contact">
-              <span>Get in touch</span>
+            <a
+              className="aur-btn aur-btn-ghost"
+              data-mag
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Get in touch — Resume</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+              </svg>
             </a>
           </div>
           <div className="aur-hero-stats">
