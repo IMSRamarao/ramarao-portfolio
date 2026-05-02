@@ -2,285 +2,322 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Ramarao Iragavarapu — Resume</title>
+<title>Ramarao Iragavarapu — Senior Frontend Developer</title>
 <style>
   @page {
     size: Letter;
-    margin: 0.55in 0.65in 0.6in 0.65in;
+    margin: 0.4in 0.5in 0.4in 0.5in;
   }
   * { box-sizing: border-box; }
   html, body {
     margin: 0;
     padding: 0;
-    font-family: "Helvetica", "Arial", sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     color: #1a1a1a;
-    font-size: 10.2pt;
-    line-height: 1.4;
+    font-size: 9.3pt;
+    line-height: 1.34;
   }
-  a { color: #1a4fa3; text-decoration: none; }
+  a { color: #5b21b6; text-decoration: none; }
 
+  .header {
+    border-bottom: 2pt solid #5b21b6;
+    padding-bottom: 6pt;
+    margin-bottom: 7pt;
+  }
   .name {
     font-size: 22pt;
     font-weight: 700;
-    letter-spacing: 0.5px;
     color: #14132e;
-    margin: 0 0 2pt 0;
+    margin: 0;
+    line-height: 1;
+  }
+  .legal {
+    font-size: 8.6pt;
+    color: #888;
+    font-style: italic;
+    margin-top: 1pt;
   }
   .title {
-    font-size: 11pt;
+    font-size: 10.5pt;
     font-weight: 600;
-    color: #4f3a8a;
-    margin: 0 0 6pt 0;
-    letter-spacing: 0.2px;
+    color: #5b21b6;
+    margin: 4pt 0 2pt 0;
   }
   .contact {
-    font-size: 9.6pt;
-    color: #333;
-    margin: 0 0 12pt 0;
+    font-size: 9.2pt;
+    color: #444;
+    margin-top: 2pt;
   }
-  .contact span { color: #888; padding: 0 4pt; }
+  .contact .sep { color: #c0c0c0; padding: 0 5pt; }
 
   h2 {
-    font-size: 11pt;
+    font-size: 10pt;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.5pt;
     color: #14132e;
-    border-bottom: 1.5pt solid #4f3a8a;
+    margin: 7pt 0 3pt 0;
     padding: 0 0 2pt 0;
-    margin: 11pt 0 6pt 0;
+    border-bottom: 1pt solid #5b21b6;
   }
 
-  p { margin: 0 0 4pt 0; }
+  .highlights {
+    background: #f6f3fb;
+    border-left: 3pt solid #5b21b6;
+    padding: 6pt 12pt 6pt 10pt;
+    margin: 0 0 3pt 0;
+  }
+  .highlights ul {
+    margin: 0;
+    padding-left: 12pt;
+    list-style-type: square;
+  }
+  .highlights ul li {
+    margin: 0 0 1.5pt 0;
+    line-height: 1.36;
+    font-size: 9.4pt;
+  }
+  .highlights ul li::marker { color: #5b21b6; }
+  .highlights ul li:last-child { margin-bottom: 0; }
+  .highlights b { color: #14132e; }
 
   .summary {
-    margin-bottom: 4pt;
-    text-align: justify;
+    font-size: 9.4pt;
+    line-height: 1.42;
+    margin: 0 0 3pt 0;
   }
 
   .skills-row {
-    margin: 0 0 2pt 0;
-    line-height: 1.45;
+    margin: 0 0 1pt 0;
+    line-height: 1.4;
+    font-size: 9.3pt;
   }
-  .skills-row .label {
-    font-weight: 700;
-    color: #14132e;
+  .skills-row .label { font-weight: 700; color: #14132e; }
+
+  .job, .edu, .proj { page-break-inside: avoid; margin: 0 0 6pt 0; }
+
+  .row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  .row .left { display: table-cell; vertical-align: baseline; }
+  .row .right {
+    display: table-cell;
+    vertical-align: baseline;
+    text-align: right;
+    white-space: nowrap;
+    width: 110pt;
+    font-size: 9.2pt;
+    color: #555;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
   }
 
-  .job {
-    margin: 0 0 7pt 0;
-    page-break-inside: avoid;
-  }
-  .job-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin: 0 0 1pt 0;
-  }
   .job-title {
     font-weight: 700;
     color: #14132e;
-    font-size: 10.6pt;
+    font-size: 10.2pt;
   }
-  .job-dates {
-    font-size: 9.4pt;
-    color: #555;
-    font-weight: 600;
-    white-space: nowrap;
-  }
+  .job-title .company { color: #5b21b6; }
   .job-meta {
-    font-size: 9.8pt;
-    color: #4f3a8a;
+    font-size: 9pt;
+    color: #666;
     font-style: italic;
-    margin: 0 0 3pt 0;
+    margin: 1pt 0 2pt 0;
   }
-  ul {
-    margin: 2pt 0 0 0;
-    padding-left: 14pt;
-  }
-  ul li {
-    margin: 0 0 2pt 0;
-    line-height: 1.4;
-  }
-  ul li::marker { color: #4f3a8a; }
-  ul ul { margin: 1pt 0 0 0; padding-left: 16pt; }
 
-  .edu {
-    margin: 0 0 5pt 0;
+  ul.bullets {
+    margin: 1pt 0 0 0;
+    padding-left: 13pt;
   }
-  .edu-degree { font-weight: 700; color: #14132e; }
-  .edu-school { color: #333; }
-  .edu-meta { font-size: 9.4pt; color: #555; }
-
-  .proj {
-    margin: 0 0 5pt 0;
-    page-break-inside: avoid;
+  ul.bullets li {
+    margin: 0 0 1.5pt 0;
+    line-height: 1.38;
+    font-size: 9.4pt;
   }
-  .proj-name { font-weight: 700; color: #14132e; }
-  .proj-meta { font-size: 9.4pt; color: #4f3a8a; font-style: italic; }
-  .proj-desc { font-size: 9.8pt; }
+  ul.bullets li::marker { color: #5b21b6; }
+  ul.bullets b { color: #14132e; }
+  ul.bullets ul { margin: 1pt 0 0 0; padding-left: 14pt; list-style-type: circle; }
 
   .tech-line {
-    font-size: 9.4pt;
+    font-size: 9pt;
     color: #555;
-    font-style: italic;
     margin-top: 2pt;
+    padding-left: 13pt;
   }
+  .tech-line .label { font-weight: 600; color: #5b21b6; }
+
+  .edu-degree { font-weight: 700; color: #14132e; font-size: 10pt; }
+  .edu-school { color: #444; font-size: 9.3pt; margin-top: 1pt; }
+
+  .proj-name { font-weight: 700; color: #14132e; font-size: 9.9pt; }
+  .proj-where { font-size: 9pt; color: #5b21b6; font-style: italic; }
+  .proj-link { font-size: 8.9pt; color: #5b21b6; }
+  .proj-desc { font-size: 9.2pt; line-height: 1.38; margin-top: 1pt; }
 </style>
 </head>
 <body>
 
-<div class="name">Ramarao Iragavarapu</div>
-<div class="title">Senior Frontend Developer · React · React Native · TypeScript · Design Systems · MCP / AI Tooling</div>
-<div class="contact">
-  Pontiac, Michigan
-  <span>·</span>
-  imsramarao6669@gmail.com
-  <span>·</span>
-  linkedin.com/in/ramarao-react
-  <span>·</span>
-  github.com/imsramarao
+<div class="header">
+  <div class="name">Ramarao Iragavarapu</div>
+  <div class="legal">Legal name: Madhu Satya Ramarao Iragavarapu</div>
+  <div class="title">Senior Frontend Developer · React · React Native · TypeScript · Design Systems · MCP / AI Tooling</div>
+  <div class="contact">
+    Pontiac, Michigan
+    <span class="sep">·</span>
+    imsramarao6669@gmail.com
+    <span class="sep">·</span>
+    linkedin.com/in/ramarao-react
+    <span class="sep">·</span>
+    github.com/IMSRamarao
+  </div>
 </div>
 
-<h2>Professional Summary</h2>
-<p class="summary">
-Senior Frontend Developer with 7+ years shipping React, React Native, and TypeScript applications across healthcare, financial services, and design system domains. Currently leading frontend on the Dream Design System (86 components, 560+ tokens, 607 icons, dual theme palettes) and the Dream MCP server at United Wholesale Mortgage — an integration that lets Claude scaffold complete pages from a single prompt using only DS primitives. Authored 20+ complex production components: charts, document viewers, media players, advanced pickers. Strong specialty in component API design, MUI customization, animation engineering, mobile + web cross-platform delivery, and AI-augmented developer tooling.
-</p>
+<h2>Highlights</h2>
+<div class="highlights">
+  <ul>
+    <li><b>Built the Dream MCP</b> at UWM — a Model Context Protocol server exposing the 86-component design system as Claude tools, letting engineers scaffold a full page from one prompt using only DS primitives.</li>
+    <li><b>Authored 20+ complex production components</b> in the Dream Design System: Gauge, Bar / Pie Chart, PDF Viewer, Audio + Video Players, Date Range Picker, Autocomplete, Stepper, Time Picker, Slider, Action Icon — most extended from MUI and re-tuned to brand type, color, and motion.</li>
+    <li><b>2.5 years on a single Florida Blue / BCBS engagement</b> across three contracting employers — public-facing healthcare app on web + React Native: in-network and out-of-network search, claims, provider profiles, tabbed cost / compare / location-map flow. Every page in production.</li>
+    <li><b>Mentored 10 junior developers</b> through the full Agile loop at Atos while shipping two internal apps and the Baylor Scott &amp; White Virtual Waiting Room + Prayer Wall features (gesture-driven CRUD on React Native).</li>
+  </ul>
+</div>
 
 <h2>Core Skills</h2>
-<div class="skills-row"><span class="label">Languages:</span> TypeScript, JavaScript, HTML, CSS</div>
-<div class="skills-row"><span class="label">Frameworks &amp; Libraries:</span> React, React 19, React Native, Next.js, Vite, Node.js, Express</div>
-<div class="skills-row"><span class="label">UI &amp; Design Systems:</span> MUI (Material UI), Storybook, Figma, Tailwind CSS, Design Tokens, Theming, Accessibility (WCAG)</div>
-<div class="skills-row"><span class="label">Mobile:</span> React Native, Expo, Reanimated, Gesture Handler, Detox</div>
+<div class="skills-row"><span class="label">Languages:</span> TypeScript, JavaScript, HTML, CSS, Dart</div>
+<div class="skills-row"><span class="label">Frameworks &amp; Libraries:</span> React, React 19, React Native, Next.js, Vite, Node.js, Express, Flutter</div>
+<div class="skills-row"><span class="label">UI &amp; Design Systems:</span> MUI (Material UI), Storybook, Figma, Tailwind CSS, NativeWind, Design Tokens, Theming, Accessibility (WCAG)</div>
+<div class="skills-row"><span class="label">Mobile:</span> React Native, Expo, Reanimated, Gesture Handler, React Navigation, Detox</div>
 <div class="skills-row"><span class="label">State Management:</span> Redux Toolkit, Redux Saga, Redux Thunk, Context API, Apollo Client, TanStack Query</div>
 <div class="skills-row"><span class="label">AI &amp; Tooling:</span> Model Context Protocol (MCP), Claude, Tool Calling, Codeium, GitHub Copilot</div>
-<div class="skills-row"><span class="label">Testing:</span> Jest, Detox, Mocha, Vitest</div>
-<div class="skills-row"><span class="label">Other:</span> Agile / Scrum, JIRA, Mentoring, Code Review, MongoDB, Angular, REST APIs</div>
+<div class="skills-row"><span class="label">Testing:</span> Jest, Detox (E2E mobile), Mocha, Vitest, React Testing Library</div>
+<div class="skills-row"><span class="label">Practice:</span> Agile / Scrum, JIRA, Mentoring, Code Review, REST APIs, MongoDB, Angular</div>
 
 <h2>Professional Experience</h2>
 
 <div class="job">
-  <div class="job-head">
-    <div class="job-title">Senior Frontend Developer · United Wholesale Mortgage</div>
-    <div class="job-dates">June 2025 — Present</div>
+  <div class="row">
+    <div class="left"><span class="job-title">Senior Frontend Developer · <span class="company">United Wholesale Mortgage</span></span></div>
+    <div class="right">June 2025 — Present</div>
   </div>
-  <div class="job-meta">Pontiac, Michigan</div>
-  <ul>
-    <li>Lead frontend engineer on the <b>Dream Design System</b>: 86 React components, 560+ design tokens, 607 icons, two theme palettes — consumed by every product team in the organization.</li>
-    <li>Authored <b>20+ of the more complex components</b> from scratch or by extending MUI primitives — Gauge, Bar Chart, Pie Chart, PDF Viewer, Slider, Autocomplete, Stepper, Action Icon, Time Picker, Date Range Picker, Audio Player, Video Player — re-tuned to the brand's typography, color, and motion language.</li>
-    <li>Co-developed the <b>Dream MCP server</b>: an MCP integration that exposes every DS component, token, icon, and usage guideline as Claude tools. Engineers describe a page in one prompt and Claude scaffolds the full implementation using only DS primitives.</li>
-    <li>Reviewed, tweaked, and bug-fixed components across the entire catalog; partnered daily with design and engineering teams across multiple product lines.</li>
+  <div class="job-meta">Pontiac, Michigan · Full-time</div>
+  <ul class="bullets">
+    <li>Lead frontend engineer on the <b>Dream Design System</b> — 86 React components, 560+ design tokens, 607 icons, dual theme palettes — consumed by every product team in the org.</li>
+    <li>Personally authored <b>20+ of the more complex components</b> from scratch or extended from MUI: Gauge, Bar / Pie Chart, PDF Viewer, Slider, Autocomplete, Stepper, Action Icon, Time Picker, Date Range Picker, Audio + Video Players. Re-tuned to brand typography, color, and motion.</li>
+    <li>Co-built the <b>Dream MCP server</b>: a Model Context Protocol integration that exposes every DS component, token, icon, and usage guideline as Claude tools. Engineers describe a page in one prompt and Claude scaffolds the full implementation.</li>
+    <li>Reviewed, refined, and stabilized components across the catalog; partnered daily with design and engineering across multiple product lines.</li>
   </ul>
-  <div class="tech-line">Tech: React, TypeScript, MCP, MUI, Storybook, Figma, Reanimated.</div>
+  <div class="tech-line"><span class="label">Tech:</span> React, TypeScript, MCP, MUI, Storybook, Figma, Reanimated.</div>
 </div>
 
 <div class="job">
-  <div class="job-head">
-    <div class="job-title">Senior React / React Native Developer · Zia Global</div>
-    <div class="job-dates">April 2024 — June 2025</div>
-  </div>
-  <div class="job-meta">Client: Florida Blue / Blue Cross Blue Shield · Remote</div>
-  <ul>
-    <li>Continued the public-facing Florida Blue member application engagement under a new employer; shipped production pages across the in-network and out-of-network member experience on both web and React Native mobile.</li>
-    <li>Delivered provider list pages, doctor profile pages, single-claim and multi-claim views, and a tab-driven provider experience covering cost details, compare providers, select providers, edit providers, and a live map view of provider locations.</li>
-    <li>Closed out React major-version upgrade work and continued security-vulnerability remediation across the codebase while sustaining feature velocity.</li>
-  </ul>
-  <div class="tech-line">Tech: React, React Native, TypeScript, Redux, REST APIs.</div>
-</div>
-
-<div class="job">
-  <div class="job-head">
-    <div class="job-title">Senior React / React Native Developer · Lanco Global Systems</div>
-    <div class="job-dates">July 2023 — April 2024</div>
+  <div class="row">
+    <div class="left"><span class="job-title">Senior React / React Native Developer · <span class="company">Zia Global</span></span></div>
+    <div class="right">Apr 2024 — Jun 2025</div>
   </div>
   <div class="job-meta">Client: Florida Blue / Blue Cross Blue Shield · Remote</div>
-  <ul>
-    <li>Continued the Florida Blue engagement; built out the public-facing member application across web and React Native.</li>
-    <li>Implemented in-network and out-of-network search flows, provider list and detail pages, claims views, and the tabbed cost / compare / select / edit / map experience.</li>
-    <li>Operated in a JIRA-driven, sprint-based team with regular production releases and active code review culture.</li>
+  <ul class="bullets">
+    <li>Continued the public-facing Florida Blue member application engagement under a new employer; shipped production pages across the in-network and out-of-network member experience on web and React Native.</li>
+    <li>Delivered provider list pages, doctor profile pages, single + multi-claim views, and a tab-driven provider experience covering cost details, compare providers, select / edit providers, and a live map view of provider locations.</li>
+    <li>Closed out React major-version upgrade work and continued security-vulnerability remediation while sustaining feature velocity.</li>
   </ul>
-  <div class="tech-line">Tech: React, React Native, TypeScript, Redux.</div>
+  <div class="tech-line"><span class="label">Tech:</span> React, React Native, TypeScript, Redux, REST APIs.</div>
 </div>
 
 <div class="job">
-  <div class="job-head">
-    <div class="job-title">Senior React / React Native Developer · SmartInt Inc</div>
-    <div class="job-dates">January 2023 — April 2023</div>
+  <div class="row">
+    <div class="left"><span class="job-title">Senior React / React Native Developer · <span class="company">Lanco Global Systems</span></span></div>
+    <div class="right">Jul 2023 — Apr 2024</div>
+  </div>
+  <div class="job-meta">Client: Florida Blue / Blue Cross Blue Shield · Remote</div>
+  <ul class="bullets">
+    <li>Continued the Florida Blue engagement; built out the public-facing member application across web and React Native — in-network and out-of-network search flows, provider list / detail pages, claims views, and the tabbed cost / compare / select / edit / map experience.</li>
+    <li>JIRA-driven, sprint-based team with regular production releases and active code-review culture.</li>
+  </ul>
+  <div class="tech-line"><span class="label">Tech:</span> React, React Native, TypeScript, Redux.</div>
+</div>
+
+<div class="job">
+  <div class="row">
+    <div class="left"><span class="job-title">Senior React / React Native Developer · <span class="company">SmartInt Inc</span></span></div>
+    <div class="right">Jan 2023 — Apr 2023</div>
   </div>
   <div class="job-meta">Client: Florida Blue / Blue Cross Blue Shield · Remote · CPT</div>
-  <ul>
-    <li>Started the Florida Blue engagement during the CPT period of my master's program.</li>
-    <li>Redesigned the out-of-network pages flow end-to-end and built the foundations for the in-network provider search across multiple screens.</li>
+  <ul class="bullets">
+    <li>Started the Florida Blue engagement during CPT. Redesigned the out-of-network pages flow end-to-end and built the foundations for the in-network provider search across multiple screens.</li>
     <li>Drove React major-version upgrades and resolved a backlog of security vulnerabilities while shipping new features in parallel.</li>
   </ul>
-  <div class="tech-line">Tech: React, React Native, TypeScript, Redux.</div>
+  <div class="tech-line"><span class="label">Tech:</span> React, React Native, TypeScript, Redux.</div>
 </div>
 
 <div class="job">
-  <div class="job-head">
-    <div class="job-title">React Native Developer · Atos Syntel</div>
-    <div class="job-dates">December 2019 — December 2021</div>
+  <div class="row">
+    <div class="left"><span class="job-title">React Native Developer · <span class="company">Atos Syntel</span></span></div>
+    <div class="right">Dec 2019 — Dec 2021</div>
   </div>
-  <div class="job-meta">Pune, India</div>
-  <ul>
-    <li>Joined directly after my Bachelor's; completed intensive in-house React and React Native training.</li>
-    <li>Shipped two internal projects — <b>Track-IT</b> (asset management system) and an <b>event management application</b> — and mentored a team of <b>10 junior developers</b> through the full Agile lifecycle (sprint planning, standups, backlog refinement, demos, retrospectives).</li>
-    <li>Worked on <b>Baylor Scott &amp; White Hospital's</b> mobile application — one of the largest hospital systems in Texas:
-      <ul>
-        <li>Built the Virtual Waiting Room: tapping a hotspot triggers layered animations that explain what happens behind the scenes during a visit.</li>
-        <li>Built the Prayer Wall: a community feed where members post prayers, with like / comment / edit / swipe-to-delete using smooth gesture-driven motion.</li>
-      </ul>
-    </li>
+  <div class="job-meta">Pune, India · Full-time</div>
+  <ul class="bullets">
+    <li>Joined directly after my Bachelor's; completed an intensive in-house React + React Native training.</li>
+    <li>Shipped two internal projects — <b>Track-IT</b> (asset management) and an <b>event management application</b> — and <b>mentored a team of 10 junior developers</b> through the full Agile lifecycle.</li>
+    <li>Worked on <b>Baylor Scott &amp; White Hospital's</b> mobile application (one of the largest hospital systems in Texas): built the <b>Virtual Waiting Room</b> with hotspot-driven layered animations, and the <b>Prayer Wall</b> — community feed with like / comment / edit / swipe-to-delete using gesture-driven motion.</li>
   </ul>
-  <div class="tech-line">Tech: React Native, Redux, CSS animations, Gesture Handler.</div>
+  <div class="tech-line"><span class="label">Tech:</span> React Native, Redux, CSS animations, Gesture Handler.</div>
 </div>
 
 <div class="job">
-  <div class="job-head">
-    <div class="job-title">MEAN Stack Developer (Intern → Developer) · Krify Solutions</div>
-    <div class="job-dates">2018 — March 2019</div>
+  <div class="row">
+    <div class="left"><span class="job-title">MEAN Stack Developer (Intern → Developer) · <span class="company">Krify Solutions</span></span></div>
+    <div class="right">2018 — Mar 2019</div>
   </div>
   <div class="job-meta">Kakinada, India</div>
-  <ul>
+  <ul class="bullets">
     <li>First professional role. Learned the full MEAN stack — MongoDB, Express, Angular, Node.js — and built an end-to-end internal application from scratch to demonstrate the skills.</li>
   </ul>
-  <div class="tech-line">Tech: Angular, Node.js, Express, MongoDB.</div>
 </div>
 
 <h2>Education</h2>
 
 <div class="edu">
-  <div class="edu-degree">Master of Science, Computer and Information Sciences</div>
-  <div class="edu-school">Southern Arkansas University · Magnolia, Arkansas</div>
-  <div class="edu-meta">December 2021 — 2023</div>
+  <div class="row">
+    <div class="left">
+      <span class="edu-degree">Master of Science, Computer and Information Sciences</span><br>
+      <span class="edu-school">Southern Arkansas University · Magnolia, Arkansas</span>
+    </div>
+    <div class="right">Dec 2021 — 2023</div>
+  </div>
 </div>
 
 <div class="edu">
-  <div class="edu-degree">Bachelor of Technology, Computer Science and Engineering</div>
-  <div class="edu-school">Jawaharlal Nehru Technological University, Kakinada · India</div>
-  <div class="edu-meta">Graduated March 2019</div>
+  <div class="row">
+    <div class="left">
+      <span class="edu-degree">Bachelor of Technology, Computer Science and Engineering</span><br>
+      <span class="edu-school">Jawaharlal Nehru Technological University, Kakinada · India</span>
+    </div>
+    <div class="right">Mar 2019</div>
+  </div>
 </div>
 
 <h2>Selected Projects</h2>
 
 <div class="proj">
-  <div class="proj-name">Dream Design System &amp; Dream MCP <span class="proj-meta">— United Wholesale Mortgage · 2025</span></div>
-  <div class="proj-desc">86 React components, 560+ design tokens, 607 icons, dual theme palettes. Built MCP server integration that exposes every component, token, icon, and usage guideline as Claude tools — engineers describe a page in one prompt and Claude scaffolds the full implementation using only DS primitives.</div>
+  <div class="proj-name">Dream Design System &amp; Dream MCP <span class="proj-where">— UWM · 2025</span></div>
+  <div class="proj-desc">86 React components, 560+ tokens, 607 icons, dual theme palettes. Built the MCP server that lets Claude scaffold complete pages from one prompt using only DS primitives.</div>
 </div>
 
 <div class="proj">
-  <div class="proj-name">Florida Blue Member Application <span class="proj-meta">— 2.5-year engagement across three employers · 2023 — 2025</span></div>
-  <div class="proj-desc">Public-facing healthcare member app on web and React Native. Shipped in-network and out-of-network search, provider lists and details, claims views, tab-driven cost-comparison flow, and a live provider-location map. All pages in production.</div>
+  <div class="proj-name">Florida Blue Member App <span class="proj-where">— SmartInt → Lanco Global → Zia Global · 2023 — 2025</span></div>
+  <div class="proj-desc">Public-facing healthcare app on web + React Native. In-network / out-of-network search, claims, provider details, tabbed cost-comparison flow, live provider map. All pages in production.</div>
 </div>
 
 <div class="proj">
-  <div class="proj-name">Baylor Scott &amp; White Hospital <span class="proj-meta">— Atos Syntel · 2020 — 2021</span></div>
-  <div class="proj-desc">Virtual Waiting Room with hotspot-driven layered animations. Prayer Wall: community feed with full social CRUD and gesture-driven swipe interactions on React Native.</div>
+  <div class="proj-name">Aurora Glass Portfolio + MCP Live Demo <span class="proj-where">— Personal · 2026</span> &nbsp; <span class="proj-link">github.com/IMSRamarao/ramarao-portfolio</span></div>
+  <div class="proj-desc">Personal portfolio (Vite + React + TypeScript) with a working MCP server simulator that exposes career data as nine tools and visualizes protocol-accurate JSON-RPC traffic end-to-end.</div>
 </div>
 
 <div class="proj">
-  <div class="proj-name">Aurora Glass Portfolio <span class="proj-meta">— Personal · 2026</span></div>
-  <div class="proj-desc">Designed and built this portfolio site with Vite + React + TypeScript. Includes a working MCP server simulator that exposes career data as nine tools, with protocol-accurate JSON-RPC traffic visualization.</div>
+  <div class="proj-name">PokemanShop <span class="proj-where">— Personal RN side project · 2024</span> &nbsp; <span class="proj-link">github.com/IMSRamarao/PokemanShop</span></div>
+  <div class="proj-desc">TypeScript React Native e-commerce / catalog app: Home, Cart, Payment, Pokeman, Single Product. Redux Toolkit, Tab + Native Stack navigation, NativeWind / Tailwind, Jest tests for every screen.</div>
 </div>
 
 </body>
