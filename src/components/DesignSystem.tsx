@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { SectionLabel } from './SectionLabel';
 
 const swatches: [string, string][] = [
-  ['primary.500', '#a78bfa'],
-  ['primary.700', '#7c3aed'],
-  ['accent.400', '#f0abfc'],
-  ['accent.600', '#c026d3'],
-  ['neutral.0', '#fefcff'],
-  ['neutral.900', '#0c0a18'],
-  ['info.500', '#22d3ee'],
+  ['primary.500', '#3b82f6'],
+  ['primary.700', '#1e40af'],
+  ['accent.400', '#60a5fa'],
+  ['accent.600', '#1e3a8a'],
+  ['gold.400', '#d4a574'],
+  ['neutral.900', '#0a1428'],
+  ['info.500', '#38bdf8'],
   ['success.500', '#34d399'],
 ];
 
@@ -83,13 +83,13 @@ export function DesignSystem() {
               <div className="aur-comp-set aur-avatar-stack">
                 <div
                   className="aur-avatar"
-                  style={{ background: 'linear-gradient(135deg,#a78bfa,#f0abfc)' }}
+                  style={{ background: 'linear-gradient(135deg,#3b82f6,#60a5fa)' }}
                 >
                   R
                 </div>
                 <div
                   className="aur-avatar"
-                  style={{ background: 'linear-gradient(135deg,#22d3ee,#a78bfa)' }}
+                  style={{ background: 'linear-gradient(135deg,#22d3ee,#3b82f6)' }}
                 >
                   K
                 </div>

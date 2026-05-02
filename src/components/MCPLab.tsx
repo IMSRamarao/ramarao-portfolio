@@ -67,12 +67,12 @@ function MCPDiagram({ pulseKey, activeIdx }: { pulseKey: number; activeIdx: numb
       <defs>
         <linearGradient id="mcpFlow" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stopColor="#22d3ee" stopOpacity="0" />
-          <stop offset="50%" stopColor="#a78bfa" stopOpacity="1" />
-          <stop offset="100%" stopColor="#f0abfc" stopOpacity="0" />
+          <stop offset="50%" stopColor="#3b82f6" stopOpacity="1" />
+          <stop offset="100%" stopColor="#60a5fa" stopOpacity="0" />
         </linearGradient>
         <radialGradient id="mcpNode">
-          <stop offset="0%" stopColor="#f0abfc" />
-          <stop offset="100%" stopColor="#7c3aed" />
+          <stop offset="0%" stopColor="#60a5fa" />
+          <stop offset="100%" stopColor="#1e40af" />
         </radialGradient>
       </defs>
       <line

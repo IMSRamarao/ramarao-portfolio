@@ -52,9 +52,9 @@ function ConstellationSVG({ items }: { items: string[] }) {
     <svg viewBox={`0 0 ${W} ${H}`} className="aur-constellation">
       <defs>
         <radialGradient id="auroraStar" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#f0abfc" stopOpacity="1" />
-          <stop offset="50%" stopColor="#a78bfa" stopOpacity=".6" />
-          <stop offset="100%" stopColor="#a78bfa" stopOpacity="0" />
+          <stop offset="0%" stopColor="#60a5fa" stopOpacity="1" />
+          <stop offset="50%" stopColor="#3b82f6" stopOpacity=".6" />
+          <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
         </radialGradient>
       </defs>
       {pts.map((p, i) => {

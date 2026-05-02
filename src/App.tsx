@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Aurora } from './components/Aurora';
-import { Cursor } from './components/Cursor';
 import { Nav } from './components/Nav';
 import { HomePage } from './pages/HomePage';
 import { ArticlePage } from './pages/ArticlePage';
@@ -29,7 +28,6 @@ export default function App() {
     <BrowserRouter>
       <div className={`aur-root ${dark ? 'aur-dark' : 'aur-light'}`}>
         <Aurora />
-        <Cursor />
         <Nav dark={dark} setDark={setDark} />
         <main>
           <Routes>
