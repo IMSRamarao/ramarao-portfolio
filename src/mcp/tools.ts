@@ -76,7 +76,7 @@ export const toolDefs: ToolDef[] = [
   {
     name: 'getContact',
     description:
-      'Returns ways to contact Ramarao: email, phone, LinkedIn, GitHub, location.',
+      'Returns ways to contact Ramarao: email, LinkedIn, GitHub, location.',
     inputSchema: { type: 'object', properties: {} },
   },
 ];
@@ -181,7 +181,6 @@ export function execute(name: string, args: Record<string, unknown> = {}): ToolR
         JSON.stringify(
           {
             email: data.email,
-            phone: data.phone,
             location: data.location,
             linkedin: data.links.linkedin,
             github: data.links.github,

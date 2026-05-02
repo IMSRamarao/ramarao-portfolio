@@ -5,7 +5,7 @@ import { SectionLabel } from './SectionLabel';
 export function Writing() {
   return (
     <section className="aur-section" id="writing">
-      <SectionLabel num="08" title="Writing" caption="what I'm thinking about" />
+      <SectionLabel num="07" title="Writing" caption="what I'm thinking about" />
       <div className="aur-write-list">
         {articles.map((a, i) => (
           <Link

@@ -18,7 +18,7 @@ export type Project = {
 };
 export type MCPTool = { name: string; desc: string };
 export type Testimonial = { quote: string; author: string; org: string };
-export type Certification = { title: string; issuer: string; year: string; tag: string };
+export type Education = { degree: string; school: string; location: string; year: string };
 
 export const data = {
   name: 'Ramarao Iragavarapu',
@@ -28,7 +28,6 @@ export const data = {
   tagline: 'Mobile · Web · AI · Design Systems',
   location: 'Pontiac, Michigan',
   email: 'imsramarao6669@gmail.com',
-  phone: '+1 (214) 837-8395',
   links: {
     github: 'https://github.com/imsramarao',
     linkedin: 'https://www.linkedin.com/in/ramarao-react/',
@@ -37,7 +36,7 @@ export const data = {
   story: [
     "My career started in 2018 as an intern at Krify Solutions in Kakinada, India — full MEAN stack, building a real end-to-end project from scratch to prove I'd actually learned the material.",
     "Atos Syntel hired me right out of college in December 2019 and put me through intensive React and React Native training. Two demo projects later — Track-IT and an event management app where I mentored ten juniors through the full Agile loop — they trusted me on Baylor Scott & White Hospital's app: a Virtual Waiting Room with hotspot-driven animations and a Prayer Wall with full social CRUD and gesture-driven motion.",
-    "I came to the US in December 2021 for my Master's in Computer & Information Sciences. CPT in early 2023 took me to SmartInt on the Florida Blue / BCBS engagement — public-facing healthcare app, redesigned out-of-network pages flow, new in-network provider search across web and React Native, plus React upgrades and CVE remediation.",
+    "I came to the US in December 2021 for my Master's in Computer & Information Sciences at Southern Arkansas University. CPT in January 2023 took me to SmartInt on the Florida Blue / BCBS engagement — and I stayed on that engagement for two and a half years through three employers (SmartInt → Lanco Global → Zia Global), shipping the in-network and out-of-network member experience end to end across web and React Native: provider lists, doctor profiles, single and multi-claim views, tabbed cost / compare / select / edit / map flows. Every page is in production.",
     "Since June 2025 I've been at United Wholesale Mortgage as a Senior Frontend Developer, building the Dream Design System (86 components, 560+ tokens, 607 icons, dual theme palettes) and the Dream MCP server that lets Claude scaffold complete pages from one prompt using only DS primitives. About 20 of the more complex components are mine — gauge, charts, PDF viewer, audio + video players, date-range picker, autocomplete, stepper. The fun part is making them read identically to a model and to a human.",
   ],
 
@@ -68,22 +67,31 @@ export const data = {
       stack: ['React', 'TypeScript', 'MCP', 'MUI', 'Storybook', 'Figma'],
     },
     {
+      year: 'Apr 2024 — Jun 2025',
+      company: 'Zia Global',
+      role: 'Senior React / React Native Developer',
+      location: 'Florida Blue / BCBS (client)',
+      summary:
+        "Continued the Florida Blue engagement under a new employer. Shipped production pages across the in-network and out-of-network flows on both web and React Native — provider list pages, doctor profile pages, single and multi-claim views, tabbed cost details, compare-providers, select / edit-providers, and a map view for provider locations. Wrapped up the React upgrade work and kept the security posture clean.",
+      stack: ['React', 'React Native', 'TypeScript', 'Redux'],
+    },
+    {
+      year: 'Jul 2023 — Apr 2024',
+      company: 'Lanco Global Systems',
+      role: 'Senior React / React Native Developer',
+      location: 'Florida Blue / BCBS (client)',
+      summary:
+        "Same Florida Blue engagement, different employer. Continued building out the public-facing member application across web and React Native — in-network and out-of-network search flows, provider list and detail pages, claims views, and the tab-driven cost / compare / select / edit / map experience. JIRA-driven team, regular production releases.",
+      stack: ['React', 'React Native', 'TypeScript', 'Redux'],
+    },
+    {
       year: 'Jan 2023 — Apr 2023',
       company: 'SmartInt Inc',
       role: 'Senior React / React Native Developer',
       location: 'Florida Blue / BCBS (client)',
       summary:
-        "Public-facing healthcare member app for Florida Blue, both web and React Native mobile. Redesigned the out-of-network pages flow end to end and built a new in-network provider search experience spanning multiple screens. Drove React version upgrades across the codebase and resolved a long backlog of security vulnerabilities while shipping velocity stayed steady.",
+        "Started the Florida Blue engagement during my CPT. Public-facing healthcare member app, both web and React Native mobile. Redesigned the out-of-network pages flow and built the foundations for the in-network provider search across multiple pages. Drove React version upgrades and resolved a long backlog of security vulnerabilities.",
       stack: ['React', 'React Native', 'TypeScript', 'Redux'],
-    },
-    {
-      year: 'Dec 2021 — 2023',
-      company: "Master's program",
-      role: 'M.S., Computer & Information Sciences',
-      location: 'United States',
-      summary:
-        "Two-year master's covering web architecture, distributed systems, and applied ML — bridging the gap between an engineer who ships and an engineer who can reason about why a system behaves the way it does.",
-      stack: ['Coursework', 'Research', 'Software Engineering'],
     },
     {
       year: 'Dec 2019 — Dec 2021',
@@ -136,13 +144,14 @@ export const data = {
     {
       name: 'Florida Blue Member App',
       tag: 'Healthcare · Web + iOS + Android',
-      year: '2023',
+      year: '2023 — 2025',
       summary:
-        "Florida Blue's public-facing member application — both web and React Native mobile from a shared design language. Redesigned the out-of-network pages flow end to end and built a new in-network provider search experience spanning multiple screens. Drove React version upgrades across the codebase and resolved a long backlog of security vulnerabilities.",
+        "Florida Blue's public-facing member application — both web and React Native mobile from a shared design language. Across 2.5 years and three employers (SmartInt → Lanco Global → Zia Global), I shipped the in-network and out-of-network search flows end to end: provider list pages, doctor profile pages, single-claim and multi-claim views, and a tabbed provider experience covering cost details, compare providers, select providers, edit providers, and a live map view of where each provider is located. Drove React version upgrades and cleared a long backlog of CVEs alongside feature work. Every page is in production.",
       metrics: [
-        { v: 'Web + RN', l: 'unified flow' },
-        { v: 'OON', l: 'pages redesigned' },
+        { v: 'Prod', l: 'all pages live' },
+        { v: 'Web + RN', l: 'unified UX' },
         { v: 'CVEs', l: 'cleared' },
+        { v: '2.5y', l: 'on this engagement' },
       ],
       stack: ['React', 'React Native', 'TypeScript', 'Redux'],
     },
@@ -185,14 +194,20 @@ export const data = {
 
   testimonials: [] as Testimonial[],
 
-  certifications: [
-    { title: 'Claude 101', issuer: 'Anthropic', year: '2025', tag: 'AI' },
-    { title: 'AI Agents — Build & Ship', issuer: 'Course', year: '2025', tag: 'AI' },
-    { title: 'Tailwind CSS — Mastery', issuer: 'Course', year: '2024', tag: 'Frontend' },
-    { title: 'React — Advanced Concepts', issuer: 'Udemy', year: '2019', tag: 'Frontend' },
-    { title: 'React Native — Advanced', issuer: 'Udemy', year: '2019', tag: 'Mobile' },
-    { title: 'Flutter — Build iOS & Android', issuer: 'Udemy', year: '2020', tag: 'Mobile' },
-  ] as Certification[],
+  education: [
+    {
+      degree: "M.S., Computer & Information Sciences",
+      school: 'Southern Arkansas University',
+      location: 'Magnolia, Arkansas',
+      year: 'Dec 2021 — 2023',
+    },
+    {
+      degree: 'B.Tech., Computer Science & Engineering',
+      school: 'Jawaharlal Nehru Technological University, Kakinada',
+      location: 'Kakinada, India',
+      year: '— Mar 2019',
+    },
+  ],
 };
 
 export type PortfolioData = typeof data;

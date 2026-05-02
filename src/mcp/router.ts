@@ -244,12 +244,11 @@ export function compose(question: string, results: { call: ToolCall; raw: string
       if (!parsed.ok) return parsed.raw;
       const c = parsed.value as {
         email: string;
-        phone: string;
         location: string;
         linkedin: string;
         github: string;
       };
-      return `Best ways to reach Ramarao:\n\n• Email: ${c.email}\n• Phone: ${c.phone}\n• LinkedIn: ${c.linkedin}\n• GitHub: ${c.github}\n• Based in: ${c.location}`;
+      return `Best ways to reach Ramarao:\n\n• Email: ${c.email}\n• LinkedIn: ${c.linkedin}\n• GitHub: ${c.github}\n• Based in: ${c.location}`;
     }
 
     default:

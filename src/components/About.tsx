@@ -50,6 +50,20 @@ export function About() {
             </div>
           </div>
           <div className="aur-glass aur-pad">
+            <div className="aur-mini-h">Education</div>
+            <div className="aur-mini-list">
+              {data.education.map((e) => (
+                <div key={e.school} className="aur-edu">
+                  <div className="aur-edu-degree">{e.degree}</div>
+                  <div className="aur-edu-school">{e.school}</div>
+                  <div className="aur-edu-meta">
+                    {e.location} · {e.year}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="aur-glass aur-pad">
             <div className="aur-mini-h">Principles</div>
             <ol className="aur-princ">
               <li>
