@@ -4,7 +4,7 @@ import { SectionLabel } from './SectionLabel';
 export function Certifications() {
   return (
     <section className="aur-section" id="certs">
-      <SectionLabel num="08" title="Certifications" caption="courses · always learning" />
+      <SectionLabel num="09" title="Certifications" caption="courses · always learning" />
       <div className="aur-cert-grid">
         {data.certifications.map((c, i) => (
           <div key={i} className="aur-glass aur-cert" data-mag>

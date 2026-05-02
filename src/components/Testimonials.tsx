@@ -4,7 +4,7 @@ import { SectionLabel } from './SectionLabel';
 export function Testimonials() {
   return (
     <section className="aur-section" id="kind-words">
-      <SectionLabel num="07" title="Kind words" caption="from people I've shipped with" />
+      <SectionLabel num="08" title="Kind words" caption="from people I've shipped with" />
       <div className="aur-test-grid">
         {data.testimonials.map((t, i) => (
           <figure key={i} className="aur-glass aur-test">

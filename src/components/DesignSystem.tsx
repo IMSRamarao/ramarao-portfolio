@@ -17,7 +17,7 @@ const spaces = [2, 4, 8, 12, 16, 24, 32, 48];
 export function DesignSystem() {
   return (
     <section className="aur-section" id="ds">
-      <SectionLabel num="06" title="Dream DS" caption="86 components in production" />
+      <SectionLabel num="07" title="Dream DS" caption="86 components in production" />
       <div className="aur-ds-grid">
         <div className="aur-glass aur-ds-card aur-ds-tokens">
           <div className="aur-ds-h">Color tokens</div>

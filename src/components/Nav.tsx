@@ -9,9 +9,9 @@ type Props = {
 
 const items: [label: string, id: string][] = [
   ['About', 'about'],
-  ['Skills', 'skills'],
   ['Work', 'work'],
-  ['MCP Lab', 'mcp-lab'],
+  ['MCP', 'mcp-lab'],
+  ['Live', 'mcp-live'],
   ['DS', 'ds'],
   ['Writing', 'writing'],
   ['Contact', 'contact'],
