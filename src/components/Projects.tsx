@@ -17,18 +17,32 @@ export function Projects() {
 
 function ProjectCard({ p, idx }: { p: Project; idx: number }) {
   const ref = useRef<HTMLElement>(null);
-  const onMove = (e: React.MouseEvent<HTMLElement>) => {
+  const raf = useRef<number | null>(null);
+  const pending = useRef<{ x: number; y: number } | null>(null);
+
+  const flush = () => {
+    raf.current = null;
     const el = ref.current;
-    if (!el) return;
+    const pos = pending.current;
+    if (!el || !pos) return;
     const r = el.getBoundingClientRect();
-    const px = (e.clientX - r.left) / r.width - 0.5;
-    const py = (e.clientY - r.top) / r.height - 0.5;
+    const px = (pos.x - r.left) / r.width - 0.5;
+    const py = (pos.y - r.top) / r.height - 0.5;
     el.style.setProperty('--rx', `${py * -6}deg`);
     el.style.setProperty('--ry', `${px * 8}deg`);
     el.style.setProperty('--mx', `${(px + 0.5) * 100}%`);
     el.style.setProperty('--my', `${(py + 0.5) * 100}%`);
   };
+
+  const onMove = (e: React.MouseEvent<HTMLElement>) => {
+    pending.current = { x: e.clientX, y: e.clientY };
+    if (raf.current == null) raf.current = requestAnimationFrame(flush);
+  };
   const onLeave = () => {
+    if (raf.current != null) {
+      cancelAnimationFrame(raf.current);
+      raf.current = null;
+    }
     const el = ref.current;
     if (!el) return;
     el.style.setProperty('--rx', '0deg');

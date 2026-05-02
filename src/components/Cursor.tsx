@@ -6,6 +6,7 @@ export function Cursor() {
   const [hover, setHover] = useState(false);
 
   useEffect(() => {
+    if (window.matchMedia('(hover: none)').matches) return;
     let rx = 0,
       ry = 0,
       x = 0,
@@ -13,13 +14,13 @@ export function Cursor() {
     const move = (e: MouseEvent) => {
       x = e.clientX;
       y = e.clientY;
-      if (dot.current) dot.current.style.transform = `translate(${x}px, ${y}px)`;
     };
     let raf = 0;
     const tick = () => {
-      rx += (x - rx) * 0.18;
-      ry += (y - ry) * 0.18;
-      if (ring.current) ring.current.style.transform = `translate(${rx}px, ${ry}px)`;
+      rx += (x - rx) * 0.22;
+      ry += (y - ry) * 0.22;
+      if (dot.current) dot.current.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      if (ring.current) ring.current.style.transform = `translate3d(${rx}px, ${ry}px, 0)`;
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
@@ -29,9 +30,9 @@ export function Cursor() {
     const leave = (e: MouseEvent) => {
       if ((e.target as HTMLElement | null)?.closest('[data-mag]')) setHover(false);
     };
-    window.addEventListener('mousemove', move);
-    window.addEventListener('mouseover', enter);
-    window.addEventListener('mouseout', leave);
+    window.addEventListener('mousemove', move, { passive: true });
+    window.addEventListener('mouseover', enter, { passive: true });
+    window.addEventListener('mouseout', leave, { passive: true });
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener('mousemove', move);
