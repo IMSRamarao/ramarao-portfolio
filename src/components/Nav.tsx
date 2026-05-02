@@ -97,7 +97,15 @@ export function Nav({ dark, setDark }: Props) {
         >
           <span className="aur-theme-orb" />
         </button>
-        <a className="aur-nav-cta" data-mag href="/#contact" onClick={onClick('contact')}>
+        <a
+          className="aur-nav-cta"
+          data-mag
+          href="/demo"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate('/demo');
+          }}
+        >
           Let's talk
           <span className="aur-arrow">→</span>
         </a>

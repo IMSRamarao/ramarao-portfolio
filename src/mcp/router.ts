@@ -76,6 +76,48 @@ function pickTech(q: string): string | null {
 export function plan(question: string): Plan {
   const q = question.toLowerCase().trim();
 
+  if (/\b(life story|tell me your story|career story|your story|journey|background|how did you (?:start|get into)|walk me through)\b/.test(q)) {
+    return {
+      thought: 'Intent: full life story. Calling getLifeStory.',
+      calls: [{ tool: 'getLifeStory', args: {} }],
+    };
+  }
+
+  if (/\b(education|study|studied|school|college|university|degree|graduate|graduated|bachelor|master|m\.?s\.?|b\.?tech|b\.?sc)\b/.test(q)) {
+    return {
+      thought: 'Intent: education / academic background. Calling getEducation.',
+      calls: [{ tool: 'getEducation', args: {} }],
+    };
+  }
+
+  if (/\b(florida blue|bcbs|blue cross|in.?network|out.?of.?network|claim|provider|insurance)\b/.test(q)) {
+    return {
+      thought: "Question references the Florida Blue / BCBS engagement. Calling getProject for the full story.",
+      calls: [{ tool: 'getProject', args: { name: 'Florida Blue' } }],
+    };
+  }
+
+  if (/\b(baylor|prayer wall|virtual waiting|hospital)\b/.test(q)) {
+    return {
+      thought: "Question references Baylor Scott & White. Calling getProject.",
+      calls: [{ tool: 'getProject', args: { name: 'Baylor' } }],
+    };
+  }
+
+  if (/\b(dream mcp|the mcp(?:\s+server)?|how does the mcp|tool calling)\b/.test(q)) {
+    return {
+      thought: 'Question references Dream MCP. Calling getProject for that.',
+      calls: [{ tool: 'getProject', args: { name: 'Dream MCP' } }],
+    };
+  }
+
+  if (/\b(component|gauge|chart|pdf viewer|date range|autocomplete|stepper|video player|audio player|slider|how many components|which components|what components)\b/.test(q)) {
+    return {
+      thought: 'Question references components / Dream DS specifics. Calling getProject for the Dream Design System.',
+      calls: [{ tool: 'getProject', args: { name: 'Dream Design System' } }],
+    };
+  }
+
   const projName = pickProjectName(q);
   if (projName && /\b(tell|show|details|about|how|what)\b/.test(q)) {
     return {
@@ -84,7 +126,7 @@ export function plan(question: string): Plan {
     };
   }
 
-  if (/\b(contact|email|reach|hire|connect|linkedin|github|phone|how (?:do|can) i (?:get|reach))\b/.test(q)) {
+  if (/\b(contact|email|reach|hire|connect|linkedin|github|how (?:do|can) i (?:get|reach))\b/.test(q)) {
     return {
       thought: 'Intent: contact info. Calling getContact.',
       calls: [{ tool: 'getContact', args: {} }],
@@ -175,10 +217,27 @@ export function compose(question: string, results: { call: ToolCall; raw: string
         role: string;
         currentEmployer: string;
         currentLocation: string;
+        currentlyBuilding: string;
+        authoredComponents: string;
         availability: string;
         yearsShipping: number;
       };
-      return `${p.name} is a ${p.role} based in ${p.currentLocation}, currently at ${p.currentEmployer}. He's been shipping production frontends for ${p.yearsShipping}+ years and is ${p.availability.toLowerCase()}.`;
+      return `${p.name} is a ${p.role} based in ${p.currentLocation}, currently at ${p.currentEmployer}. He's been shipping production frontends for ${p.yearsShipping}+ years.\n\nRight now he's building ${p.currentlyBuilding}. He's personally authored ${p.authoredComponents}.\n\n${p.availability}.`;
+    }
+
+    case 'getLifeStory': {
+      if (!parsed.ok) return parsed.raw;
+      const s = parsed.value as { paragraphs: string[]; startedAt: string; currentlyAt: string };
+      return `${s.paragraphs.join('\n\n')}\n\n— Started: ${s.startedAt}\n— Currently: ${s.currentlyAt}`;
+    }
+
+    case 'getEducation': {
+      if (!parsed.ok) return parsed.raw;
+      const items = parsed.value as { degree: string; school: string; location: string; year: string }[];
+      const lines = items.map(
+        (e) => `• ${e.degree}\n  ${e.school} — ${e.location} (${e.year})`,
+      );
+      return `Education:\n\n${lines.join('\n\n')}`;
     }
 
     case 'listSkills': {
@@ -257,11 +316,13 @@ export function compose(question: string, results: { call: ToolCall; raw: string
 }
 
 export const suggestedQuestions = [
+  'Tell me your career story',
+  'What components did you build at UWM?',
+  'What did you ship for Florida Blue?',
+  'Where did you go to school?',
+  'Tell me about Baylor Scott & White',
+  'How does the Dream MCP work?',
   "What's Ramarao's stack?",
-  'Tell me about the Dream Design System project',
   'Where did he work in 2024?',
-  'What is he writing about?',
   'How can I reach him?',
-  'Show me his React Native projects',
-  'What are his AI / MCP skills?',
 ];

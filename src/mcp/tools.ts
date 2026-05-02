@@ -6,7 +6,19 @@ export const toolDefs: ToolDef[] = [
   {
     name: 'getProfile',
     description:
-      "Returns Ramarao's profile: name, current role, location, employer, availability.",
+      "Returns Ramarao's profile: name, current role, location, employer, what he's currently building, availability, years shipping.",
+    inputSchema: { type: 'object', properties: {} },
+  },
+  {
+    name: 'getLifeStory',
+    description:
+      "Returns Ramarao's full career narrative as a chronological story — Krify internship, Atos training and Baylor Scott & White work, Master's at Southern Arkansas University, the 2.5-year Florida Blue engagement across three employers, and the current Dream DS / Dream MCP work at UWM.",
+    inputSchema: { type: 'object', properties: {} },
+  },
+  {
+    name: 'getEducation',
+    description:
+      "Returns Ramarao's degrees: where he studied, what he studied, and when.",
     inputSchema: { type: 'object', properties: {} },
   },
   {
@@ -94,13 +106,33 @@ export function execute(name: string, args: Record<string, unknown> = {}): ToolR
             role: data.role,
             currentEmployer: data.experience[0].company,
             currentLocation: data.location,
+            currentlyBuilding: 'Dream Design System (86 components, 560+ tokens, 607 icons) and the Dream MCP server at UWM',
+            authoredComponents:
+              "~20 of the more complex Dream DS components: gauge, bar/pie charts, PDF viewer, audio + video players, date-range picker, autocomplete, stepper, action icon, time picker, slider",
             availability: 'Open to senior FE / RN / DS / AI roles',
             yearsShipping: 7,
+            specialties: ['React', 'React Native', 'TypeScript', 'MCP', 'Design Systems', 'CSS animation'],
           },
           null,
           2,
         ),
       );
+
+    case 'getLifeStory':
+      return text(
+        JSON.stringify(
+          {
+            paragraphs: data.story,
+            startedAt: 'Krify Solutions, Kakinada, India · 2018',
+            currentlyAt: 'United Wholesale Mortgage, Pontiac, MI · since June 2025',
+          },
+          null,
+          2,
+        ),
+      );
+
+    case 'getEducation':
+      return text(JSON.stringify(data.education, null, 2));
 
     case 'listSkills': {
       const cat = (args.category as string | undefined) ?? '';

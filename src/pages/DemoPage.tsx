@@ -24,17 +24,18 @@ export function DemoPage() {
             <span className="aur-tag-dot" /> LIVE DEMO · INTERACTIVE
           </div>
           <h1 className="aur-demo-page-title">
-            Talk to my portfolio over <em>MCP</em>.
+            Skip the small talk. <em>Ask my MCP server</em>.
           </h1>
           <p className="aur-demo-page-dek">
-            A protocol-accurate Model Context Protocol server simulation that exposes my profile,
-            projects, timeline, skills, articles, and contact info as seven tools. Ask anything in
-            the box below and watch the JSON-RPC traffic stream between Claude and the server.
+            A protocol-accurate Model Context Protocol server simulation that exposes my full life
+            story, education, every role on my timeline, every project I've shipped, and every
+            article I've written — as nine tools Claude can call. Ask anything in the box below
+            and watch the JSON-RPC traffic stream between Claude and the server.
           </p>
 
           <div className="aur-demo-page-stats">
             <div>
-              <div className="aur-demo-page-statv">7</div>
+              <div className="aur-demo-page-statv">9</div>
               <div className="aur-demo-page-statl">Tools exposed</div>
             </div>
             <div>
