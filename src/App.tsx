@@ -19,7 +19,7 @@ export default function App() {
   const [dark, setDark] = useState(readTheme);
 
   useEffect(() => {
-    document.body.style.background = dark ? '#0a0814' : '#f5f3ff';
+    document.body.style.background = dark ? '#050a18' : '#faf8f3';
     document.documentElement.classList.toggle('aur-light-pre', !dark);
     localStorage.setItem('aur-theme', dark ? 'dark' : 'light');
   }, [dark]);
