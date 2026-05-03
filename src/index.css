@@ -379,8 +379,9 @@ body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif
 .aur-about-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px; align-items: start; }
 .aur-prose {
   font-family: 'Fraunces', serif;
-  font-size: 26px; line-height: 1.45; letter-spacing: -0.01em;
-  color: var(--fg-dim); margin: 0 0 24px;
+  font-variation-settings: 'opsz' 32, 'wght' 360, 'SOFT' 70;
+  font-size: 23px; line-height: 1.5; letter-spacing: -0.005em;
+  color: var(--fg-dim); margin: 0 0 22px;
   opacity: 0; transform: translateY(12px);
   transition: opacity .8s ease, transform .8s ease;
 }
@@ -608,7 +609,9 @@ body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif
 .aur-light .aur-mcp-demo-thought { color: #94a3b8; }
 .aur-light .aur-cmd { color: #f5f3ff; }
 .aur-mcp-intro {
-  font-family: 'Fraunces', serif; font-size: 22px; line-height: 1.45;
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 32, 'wght' 360, 'SOFT' 70;
+  font-size: 20px; line-height: 1.5; letter-spacing: -0.005em;
   color: var(--fg-dim); margin: 0;
 }
 .aur-mcp-intro em { color: var(--accent-2); font-style: italic; }
@@ -1031,7 +1034,9 @@ body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif
 }
 .aur-case-dek {
   font-family: 'Fraunces', serif;
-  font-style: italic; font-size: 22px; line-height: 1.4;
+  font-variation-settings: 'opsz' 32, 'wght' 360, 'SOFT' 70;
+  font-style: italic; font-size: 20px; line-height: 1.5;
+  letter-spacing: -0.005em;
   color: var(--fg-dim); margin: 0 0 36px;
 }
 .aur-case-credits {
@@ -1180,7 +1185,9 @@ body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif
 }
 .aur-article-dek {
   font-family: 'Fraunces', serif;
-  font-style: italic; font-size: 24px; line-height: 1.4;
+  font-variation-settings: 'opsz' 32, 'wght' 360, 'SOFT' 70;
+  font-style: italic; font-size: 22px; line-height: 1.5;
+  letter-spacing: -0.005em;
   color: var(--fg-dim); margin: 0 0 32px;
 }
 .aur-article-byline {
@@ -1351,60 +1358,114 @@ body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif
 }
 
 /* ── Responsive ───────────────────────────────────────────── */
+
+/* Tablets / small laptops (≤ 1100px) */
 @media (max-width: 1100px) {
-  .aur-hero { padding: 40px 28px; }
+  .aur-hero { padding: 44px 28px 36px; }
   .aur-hero-grid { grid-template-columns: 1fr; gap: 36px; }
-  .aur-hero-name { font-size: 52px; }
-  .aur-hero-photo { max-width: 360px; }
+  .aur-hero-name { font-size: 56px; }
+  .aur-hero-pitch { font-size: 16px; }
+  .aur-hero-photo { max-width: 420px; margin: 0 auto; }
   .aur-section { padding: 80px 28px; }
-  .aur-sec-title { font-size: 44px; }
+  .aur-sec-title { font-size: 42px; }
   .aur-about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .aur-prose { font-size: 22px; }
   .aur-skills { grid-template-columns: 1fr; gap: 24px; }
   .aur-mcp-grid { grid-template-columns: 1fr; }
   .aur-proj-grid { grid-template-columns: repeat(4, 1fr); }
   .aur-proj-wide { grid-column: span 4; }
   .aur-proj-reg { grid-column: span 2; }
-  .aur-proj-wide .aur-proj-name { font-size: 44px; }
+  .aur-proj-wide .aur-proj-name { font-size: 40px; }
   .aur-test-grid { grid-template-columns: 1fr 1fr; }
   .aur-cert-grid { grid-template-columns: 1fr 1fr; }
   .aur-contact { padding: 80px 28px 48px; }
-  .aur-contact-title { font-size: 64px; }
+  .aur-contact-title { font-size: 60px; }
   .aur-contact-grid { grid-template-columns: 1fr 1fr; }
   .aur-ds-tokens, .aur-ds-spacing { grid-column: span 6; }
 }
+
+/* Phones (≤ 720px) */
 @media (max-width: 720px) {
-  .aur-root { cursor: auto; }
-  .aur-cursor-dot, .aur-cursor-ring { display: none; }
-  .aur-nav { padding: 12px 16px; flex-wrap: wrap; gap: 12px; }
+  .aur-nav { padding: 12px 16px; flex-wrap: wrap; gap: 10px; }
   .aur-nav-status { display: none; }
   .aur-nav-links { display: none; }
-  .aur-hero { padding: 32px 18px; }
-  .aur-hero-name { font-size: 36px; }
-  .aur-hero-stats { grid-template-columns: 1fr 1fr; }
-  .aur-section { padding: 60px 18px; }
-  .aur-sec-title { font-size: 32px; }
+
+  .aur-hero { padding: 28px 18px 28px; }
+  .aur-hero-name { font-size: 40px; line-height: 1.04; }
+  .aur-hero-role { font-size: 14px; }
+  .aur-hero-pitch { font-size: 15px; line-height: 1.55; }
+  .aur-hero-stack { gap: 5px; margin-bottom: 20px; }
+  .aur-hero-chip { font-size: 11px; padding: 4px 9px; }
+  .aur-hero-cta { gap: 10px; flex-direction: column; align-items: stretch; }
+  .aur-hero-cta .aur-btn { width: 100%; justify-content: center; padding: 13px 20px; }
+  .aur-logos { padding: 12px 14px; }
+  .aur-logos-row { gap: 0; }
+  .aur-logo-mark { font-size: 12.5px; line-height: 1.7; }
+  .aur-logo-sep { padding: 0 8px; }
+  .aur-hero-stats { grid-template-columns: 1fr 1fr; gap: 16px; padding: 18px; }
+  .aur-stat-v { font-size: 28px; }
+  .aur-hero-photo { max-width: 100%; }
+  .aur-term-body { min-height: 170px; font-size: 12px; }
+
+  .aur-section { padding: 56px 18px; }
+  .aur-sec-label { margin-bottom: 36px; padding-bottom: 14px; }
+  .aur-sec-title { font-size: 30px; }
   .aur-sec-caption { display: none; }
+
+  .aur-prose { font-size: 19px; line-height: 1.55; margin-bottom: 18px; }
+  .aur-mini-h { margin-bottom: 10px; }
+
   .aur-tl-rail { left: 18px; }
-  .aur-tl-row { grid-template-columns: 0 24px 1fr; }
+  .aur-tl-row { grid-template-columns: 0 24px 1fr; margin-bottom: 22px; }
   .aur-tl-year { grid-column: 3; grid-row: 1; text-align: left; padding: 0 0 6px; }
-  .aur-tl-card { grid-column: 3; grid-row: 2; }
+  .aur-tl-card { grid-column: 3; grid-row: 2; padding: 18px; }
   .aur-tl-node { margin-top: 8px; }
+
   .aur-proj { padding: 22px; }
-  .aur-proj-grid { grid-template-columns: 1fr; gap: 16px; }
+  .aur-proj-grid { grid-template-columns: 1fr; gap: 14px; }
   .aur-proj-wide, .aur-proj-reg { grid-column: span 1; }
-  .aur-proj-name, .aur-proj-wide .aur-proj-name { font-size: 30px; }
+  .aur-proj-name, .aur-proj-wide .aur-proj-name { font-size: 26px; }
+  .aur-proj-mv { font-size: 22px; }
+  .aur-proj-sum { font-size: 13.5px; }
+
+  .aur-mcp-stage { padding: 18px; min-height: 320px; }
+  .aur-mcp-intro { font-size: 17px; }
+  .aur-mcp-tools { max-height: 200px; }
+
   .aur-test-grid { grid-template-columns: 1fr; }
   .aur-cert-grid { grid-template-columns: 1fr; }
   .aur-comp-grid { grid-template-columns: 1fr; }
-  .aur-contact { padding: 60px 18px 32px; }
-  .aur-contact-title { font-size: 44px; }
-  .aur-contact-grid { grid-template-columns: 1fr; }
-  .aur-foot { flex-direction: column; gap: 8px; }
-  .aur-write-row { grid-template-columns: 30px 1fr 24px; }
+
+  .aur-write-row { grid-template-columns: 30px 1fr 24px; gap: 14px; padding: 18px 4px; }
   .aur-write-tag, .aur-write-read { display: none; }
   .aur-write-title { font-size: 18px; }
-  .aur-hero-name { font-size: 42px; }
-  .aur-hero-pitch { font-size: 15px; }
-  .aur-logo-mark { font-size: 12px; }
-  .aur-logo-sep { padding: 0 8px; }
+
+  .aur-contact { padding: 56px 18px 32px; }
+  .aur-contact-title { font-size: 38px; line-height: 1.05; margin-bottom: 36px; }
+  .aur-contact-grid { grid-template-columns: 1fr; }
+  .aur-foot { flex-direction: column; gap: 8px; }
+}
+
+/* Tiny phones (≤ 480px — iPhone SE, narrow Android) */
+@media (max-width: 480px) {
+  .aur-hero { padding: 22px 14px 24px; }
+  .aur-hero-name { font-size: 34px; }
+  .aur-hero-role { font-size: 13px; }
+  .aur-hero-pitch { font-size: 14.5px; }
+  .aur-hero-stats { grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; }
+  .aur-stat-v { font-size: 24px; }
+  .aur-tag { font-size: 10px; padding: 5px 10px; margin-bottom: 16px; }
+  .aur-logo-mark { font-size: 11.5px; }
+  .aur-logo-sep { padding: 0 6px; }
+  .aur-section { padding: 48px 14px; }
+  .aur-sec-title { font-size: 26px; }
+  .aur-prose { font-size: 17.5px; line-height: 1.55; }
+  .aur-proj-name, .aur-proj-wide .aur-proj-name { font-size: 23px; }
+  .aur-proj { padding: 18px; }
+  .aur-contact-title { font-size: 32px; }
+  .aur-article-title, .aur-case-title { font-size: 32px; }
+  .aur-article-dek, .aur-case-dek { font-size: 18px; }
+  .aur-article-body, .aur-case-body { font-size: 15px; }
+  .aur-demo-page-title { font-size: 36px; }
+  .aur-demo-page-dek { font-size: 15px; }
 }
